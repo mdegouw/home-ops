@@ -8,16 +8,16 @@ spec:
     storage: 1Mi
   accessModes:
     - ReadWriteMany
-  storageClassName: local-path
+  storageClassName: minio-nfs
   persistentVolumeReclaimPolicy: Retain
-  # nfs:
-  #   server: "192.168.178.240"
-  #   path: /volume1/minio
-  # mountOptions:
-  #   - nfsvers=4
-  #   - nconnect=8
-  #   - hard
-  #   - noatime
+  nfs:
+    server: "192.168.178.240"
+    path: /volume1/minio
+  mountOptions:
+    - nfsvers=4
+    - nconnect=8
+    - hard
+    - noatime
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -27,7 +27,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: local-path
+  storageClassName: minio-nfs
   resources:
     requests:
       storage: 1Mi
