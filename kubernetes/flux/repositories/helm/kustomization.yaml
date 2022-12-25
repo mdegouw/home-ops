@@ -14,3 +14,5 @@ resources:
   - ./stakater.yaml
   - ./weave-gitops.yaml
   - ./external-secrets.yaml
+  - ./cloudnative-pg.yaml
+  - ./redis-operator.yaml
