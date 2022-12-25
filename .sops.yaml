@@ -13,3 +13,7 @@ creation_rules:
     key_groups:
       - age:
           - age1gd6r3clc7ancjq4g04mag4chl0wudf7qh7hevwy9qxl9tvchdygshazl6w
+  - path_regex: kubernetes/.*\.sops\.toml
+    key_groups:
+      - age:
+          - age1gd6r3clc7ancjq4g04mag4chl0wudf7qh7hevwy9qxl9tvchdygshazl6w

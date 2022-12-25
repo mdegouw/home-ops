@@ -6,3 +6,7 @@ resources:
   - ./echo-server/ks.yaml
   - ./hajimari/ks.yaml
   - ./redis/ks.yaml
+  - ./glauth/ks.yaml
+  - ./minio/k8s.yaml
+  - ./smtp-relay/ks.yaml
+  - ./cloudnative-pg/ks.yaml
