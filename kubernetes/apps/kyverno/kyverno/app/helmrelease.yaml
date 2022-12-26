@@ -23,13 +23,13 @@ spec:
       retries: 3
   values:
     installCRDs: true
-    replicaCount: 2
+    replicaCount: 3
     serviceMonitor:
       enabled: true
-    # topologySpreadConstraints:
-    #   - maxSkew: 1
-    #     topologyKey: kubernetes.io/hostname
-    #     whenUnsatisfiable: ScheduleAnyway
-    #     labelSelector:
-    #       matchLabels:
-    #         app.kubernetes.io/instance: kyverno
+    topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: kubernetes.io/hostname
+        whenUnsatisfiable: DoNotSchedule
+        labelSelector:
+          matchLabels:
+            app.kubernetes.io/instance: kyverno
