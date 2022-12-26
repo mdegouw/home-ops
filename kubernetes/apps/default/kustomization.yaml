@@ -8,7 +8,7 @@ resources:
   - ./emqx/ks.yaml
   # - ./redis/ks.yaml
   # - ./glauth/ks.yaml
-  # - ./minio/ks.yaml
+  - ./minio/ks.yaml
   # - ./smtp-relay/ks.yaml
   # - ./cloudnative-pg/ks.yaml
   # - ./authelia/ks.yaml
