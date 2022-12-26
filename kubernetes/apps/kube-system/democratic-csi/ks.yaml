@@ -8,6 +8,8 @@ metadata:
   labels:
     substitution.flux.home.arpa/enabled: "true"
 spec:
+  dependsOn:
+    - name: cluster-apps-onepassword-connect
   path: ./kubernetes/apps/kube-system/democratic-csi/freenas-nfs
   prune: true
   sourceRef:
@@ -31,6 +33,8 @@ metadata:
   labels:
     substitution.flux.home.arpa/enabled: "true"
 spec:
+  dependsOn:
+    - name: cluster-apps-onepassword-connect
   path: ./kubernetes/apps/kube-system/democratic-csi/freenas-iscsi
   prune: true
   sourceRef:
