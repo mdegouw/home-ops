@@ -21,3 +21,4 @@ resources:
   - ./csi-driver-nfs.yaml
   - ./descheduler.yaml
   - ./node-feature-discovery.yaml
+  - ./democratic-csi.yaml
