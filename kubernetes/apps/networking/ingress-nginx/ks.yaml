@@ -12,7 +12,7 @@ spec:
     - name: cluster-apps-cert-manager-issuers
     - name: cluster-apps-metallb
     - name: cluster-apps-metallb-config
-    - name: cluster-apps-kyverno
+    # - name: cluster-apps-kyverno
   path: ./kubernetes/apps/networking/ingress-nginx/app
   prune: true
   sourceRef:
