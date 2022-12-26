@@ -23,7 +23,7 @@ spec:
       retries: 3
   values:
     csiDriver:
-      name: "org.democratic-csi.nfs"
+      name: "org.democratic-csi.iscsi"
 
     storageClasses:
       - name: freenas-iscsi-csi
