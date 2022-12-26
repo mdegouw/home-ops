@@ -1,0 +1,121 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: freenas-nfs
+  namespace: kube-system
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: democratic-csi
+      version: 0.13.5
+      sourceRef:
+        kind: HelmRepository
+        name: democratic-csi
+        namespace: flux-system
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    csiDriver:
+      name: "org.democratic-csi.nfs"
+
+    storageClasses:
+      - name: freenas-nfs-csi
+        defaultClass: false
+        reclaimPolicy: Retain
+        volumeBindingMode: Immediate
+        allowVolumeExpansion: true
+        parameters:
+          fsType: nfs
+
+        mountOptions:
+          - noatime
+          - nfsvers=4
+        secrets:
+          provisioner-secret:
+          controller-publish-secret:
+          node-stage-secret:
+          node-publish-secret:
+          controller-expand-secret:
+
+    driver:
+      config:
+        driver: freenas-nfs
+        instance_id:
+        httpConnection:
+          protocol: http
+          host: 192.168.178.241
+          port: 80
+          # This is the API key that we generated previously
+          apiKey: 1-WzLTepjyIn59GD5ozsnPrpTbadw9Y0XHjsCXUaoig4x3bSJq39claXcbpuIlddTk
+          username: root
+          allowInsecure: true
+          apiVersion: 2
+        sshConnection:
+          host: 192.168.178.241
+          port: 22
+          username: root
+          # This is the SSH key that we generated for passwordless authentication
+          privateKey: |
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            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
+            -----END OPENSSH PRIVATE KEY-----
+        zfs:
+          # Make sure to use the storage pool that was created previously
+          datasetParentName: p/k8s/nfs
+          detachedSnapshotsDatasetParentName: p/k8s/nfs/snaps
+          datasetEnableQuotas: true
+          datasetEnableReservation: false
+          datasetPermissionsMode: "0777"
+          datasetPermissionsUser: root
+          datasetPermissionsGroup: wheel
+        nfs:
+          shareHost: 192.168.178.241
+          shareAlldirs: false
+          shareAllowedHosts: []
+          shareAllowedNetworks: []
+          shareMaprootUser: root
+          shareMaprootGroup: wheel
+          shareMapallUser: ""
+          shareMapallGroup: ""
