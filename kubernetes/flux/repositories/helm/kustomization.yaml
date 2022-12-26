@@ -18,3 +18,6 @@ resources:
   - ./redis-operator.yaml
   - ./kyverno.yaml
   - ./emqx.yaml
+  - ./csi-driver-nfs.yaml
+  - ./descheduler.yaml
+  - ./node-feature-discovery.yaml

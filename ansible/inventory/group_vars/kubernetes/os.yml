@@ -20,7 +20,6 @@ fedora:
     - python3-kubernetes
     - python3-libselinux
     - python3-pyyaml
-    - nfs-common
 
 ubuntu:
   packages:
@@ -35,3 +34,9 @@ ubuntu:
     - python3-kubernetes
     - python3-yaml
     - nfs-common
+    - cifs-utils
+    - open-iscsi
+    - lsscsi
+    - sg3-utils
+    - multipath-tools
+    - scsitools

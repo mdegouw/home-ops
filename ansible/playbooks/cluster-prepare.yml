@@ -127,6 +127,30 @@
             state: permissive
             policy: targeted
           when: ansible_facts['distribution'] == 'Fedora'
+        - name: System Configuration (2) | Enable Multipath Config | Ubuntu
+          ansible.builtin.blockinfile:
+            state: present
+            insertafter: EOF
+            dest: /etc/multipath.conf
+            marker: "<!-- add services ANSIBLE MANAGED BLOCK -->"
+            content: |
+              defaults {
+                  user_friendly_names yes
+                  find_multipaths yes
+              }
+          when: ansible_facts['distribution'] == 'Ubuntu'
+        - name: System Configuration (2) | Enable Multipath-Tools | Ubuntu
+          ansible.builtin.service:
+            name: multipath-tools
+            enabled: true
+            state: started
+          when: ansible_facts['distribution'] == 'Ubuntu'
+        - name: System Configuration (2) | Enable open-iscsi | Ubuntu
+          ansible.builtin.service:
+            name: open-iscsi
+            enabled: true
+            state: started
+          when: ansible_facts['distribution'] == 'Ubuntu'
       notify: Reboot
 
   handlers:
