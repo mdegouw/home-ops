@@ -58,49 +58,8 @@ spec:
         sshConnection:
           host: 192.168.178.241
           port: 22
-          username: root
-          # password: "4Pn2XCiQ30Js"
-          # This is the SSH key that we generated for passwordless authentication
-          privateKey: |
-            -----BEGIN RSA PRIVATE KEY-----
-            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
-            -----END RSA PRIVATE KEY-----
+          username: k3s
+          password: "4Pn2XCiQ30Js"
         zfs:
           # the example below is useful for TrueNAS 12
           cli:
