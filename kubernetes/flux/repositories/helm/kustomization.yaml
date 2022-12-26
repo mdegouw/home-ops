@@ -17,3 +17,4 @@ resources:
   - ./cloudnative-pg.yaml
   - ./redis-operator.yaml
   - ./kyverno.yaml
+  - ./emqx.yaml
