@@ -63,7 +63,7 @@ spec:
           metadata:
             annotations:
               +(external-dns.alpha.kubernetes.io/target): |-
-                ipv4.mdegouw.nl
+                ipv4.${SECRET_DOMAIN}
 ---
 apiVersion: kyverno.io/v1
 kind: ClusterPolicy
