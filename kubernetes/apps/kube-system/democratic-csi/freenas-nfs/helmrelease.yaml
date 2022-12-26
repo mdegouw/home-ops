@@ -60,8 +60,8 @@ spec:
         sshConnection:
           host: 192.168.178.241
           port: 22
-          username: k3s
-          password: "4Pn2XCiQ30Js"
+          username: root
+          password: "Jojomatjo1!"
         zfs:
           # Make sure to use the storage pool that was created previously
           datasetParentName: p/k8s/nfs/vol

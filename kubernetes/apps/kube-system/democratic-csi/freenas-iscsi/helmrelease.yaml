@@ -58,8 +58,8 @@ spec:
         sshConnection:
           host: 192.168.178.241
           port: 22
-          username: k3s
-          password: "4Pn2XCiQ30Js"
+          username: root
+          password: "Jojomatjo1!"
         zfs:
           # the example below is useful for TrueNAS 12
           cli:
