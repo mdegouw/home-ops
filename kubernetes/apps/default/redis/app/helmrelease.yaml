@@ -27,7 +27,7 @@ spec:
   values:
     global:
       # imageRegistry: public.ecr.aws
-      storageClass: local-path
+      storageClass: freenas-iscsi-csi
     auth:
       enabled: false
       sentinel: false

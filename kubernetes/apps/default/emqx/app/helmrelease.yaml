@@ -54,7 +54,7 @@ spec:
       enabled: false
     persistence:
       enabled: true
-      storageClass: local-path
+      storageClass: freenas-iscsi-csi
       size: 100Mi
     affinity:
       podAntiAffinity:

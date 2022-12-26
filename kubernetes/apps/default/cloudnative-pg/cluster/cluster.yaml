@@ -12,7 +12,7 @@ spec:
   primaryUpdateStrategy: unsupervised
   storage:
     size: 20Gi
-    storageClass: local-path
+    storageClass: freenas-iscsi-csi
   superuserSecret:
     name: cloudnative-pg-superuser-secret
   bootstrap:
