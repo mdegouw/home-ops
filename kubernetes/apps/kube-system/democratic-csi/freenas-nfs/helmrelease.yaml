@@ -68,8 +68,16 @@ spec:
         sshConnection:
           host: 192.168.178.241
           port: 22
-          username: root
-          password: "Jojomatjo1!"
+          username:
+            valueFrom:
+              secretKeyRef:
+                name: democratic-csi-freenas-nfs-secret
+                key: ssh_user
+          password:
+            valueFrom:
+              secretKeyRef:
+                name: democratic-csi-freenas-nfs-secret
+                key: ssh_password
         zfs:
           # Make sure to use the storage pool that was created previously
           datasetParentName: p/k8s/nfs/vol
