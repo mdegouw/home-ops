@@ -52,30 +52,26 @@ spec:
           port: 80
           # This is the API key that we generated previously
           apiKey:
-            valueFrom:
-              secretKeyRef:
-                name: democratic-csi-freenas-iscsi-secret
-                key: api_key
+            secret:
+              name: democratic-csi-freenas-iscsi-secret
+              key: api_key
           username:
-            valueFrom:
-              secretKeyRef:
-                name: democratic-csi-freenas-iscsi-secret
-                key: api_user
+            secret:
+              name: democratic-csi-freenas-iscsi-secret
+              key: api_user
           allowInsecure: true
           apiVersion: 2
         sshConnection:
           host: 192.168.178.241
           port: 22
           username:
-            valueFrom:
-              secretKeyRef:
-                name: democratic-csi-freenas-iscsi-secret
-                key: ssh_user
+            secret:
+              name: democratic-csi-freenas-iscsi-secret
+              key: ssh_user
           password:
-            valueFrom:
-              secretKeyRef:
-                name: democratic-csi-freenas-iscsi-secret
-                key: ssh_password
+            secret:
+              name: democratic-csi-freenas-iscsi-secret
+              key: ssh_password
         zfs:
           # the example below is useful for TrueNAS 12
           cli:
