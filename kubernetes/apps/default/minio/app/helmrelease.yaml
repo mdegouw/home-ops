@@ -107,7 +107,7 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: minio-nfs
+        existingClaim: minio-config
         mountPath: /data
     resources:
       requests:

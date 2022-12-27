@@ -22,12 +22,12 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: minio-nfs
+  name: minio-config
   namespace: default
 spec:
   accessModes:
     - ReadWriteMany
-  storageClassName: minio-nfs
+  storageClassName: freenas-iscsi-csi
   resources:
     requests:
       storage: 1Mi
