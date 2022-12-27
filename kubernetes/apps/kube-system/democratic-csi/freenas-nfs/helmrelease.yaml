@@ -52,16 +52,11 @@ spec:
           protocol: http
           host: 192.168.178.241
           port: 80
-          # This is the API key that we generated previously
-          apiKey: 1-WzLTepjyIn59GD5ozsnPrpTbadw9Y0XHjsCXUaoig4x3bSJq39claXcbpuIlddTk
-          username: root
           allowInsecure: true
           apiVersion: 2
         sshConnection:
           host: 192.168.178.241
           port: 22
-          username: root
-          password: jhg4jhfdaerd265
         zfs:
           # Make sure to use the storage pool that was created previously
           datasetParentName: p/k8s/nfs/vol
@@ -80,3 +75,20 @@ spec:
           shareMaprootGroup: wheel
           shareMapallUser: ""
           shareMapallGroup: ""
+  valuesFrom:
+    - targetPath: driver.config.httpConnection.apiKey
+      kind: Secret
+      name: democratic-csi-freenas-nfs-secret
+      valuesKey: api_key
+    - targetPath: driver.config.httpConnection.username
+      kind: Secret
+      name: democratic-csi-freenas-nfs-secret
+      valuesKey: api_user
+    - targetPath: driver.config.sshConnection.username
+      kind: Secret
+      name: democratic-csi-freenas-nfs-secret
+      valuesKey: ssh_user
+    - targetPath: driver.config.sshConnection.password
+      kind: Secret
+      name: democratic-csi-freenas-nfs-secret
+      valuesKey: ssh_password
