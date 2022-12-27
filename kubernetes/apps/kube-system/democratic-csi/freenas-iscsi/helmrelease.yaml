@@ -50,16 +50,11 @@ spec:
           protocol: http
           host: 192.168.178.241
           port: 80
-          # This is the API key that we generated previously
-          apiKey: 1-WzLTepjyIn59GD5ozsnPrpTbadw9Y0XHjsCXUaoig4x3bSJq39claXcbpuIlddTk
-          username: root
           allowInsecure: true
           apiVersion: 2
         sshConnection:
           host: 192.168.178.241
           port: 22
-          username: root
-          password: jhg4jhfdaerd265
         zfs:
           # the example below is useful for TrueNAS 12
           cli:
@@ -108,3 +103,20 @@ spec:
           extentRpm: "7200"
           # 0-100 (0 == ignore)
           extentAvailThreshold: 0
+  valuesFrom:
+    - targetPath: driver.config.httpConnection.apiKey
+      kind: Secret
+      name: democratic-csi-freenas-iscsi-secret
+      valuesKey: api_key
+    - targetPath: driver.config.httpConnection.username
+      kind: Secret
+      name: democratic-csi-freenas-iscsi-secret
+      valuesKey: api_user
+    - targetPath: driver.config.sshConnection.username
+      kind: Secret
+      name: democratic-csi-freenas-iscsi-secret
+      valuesKey: ssh_user
+    - targetPath: driver.config.sshConnection.password
+      kind: Secret
+      name: democratic-csi-freenas-iscsi-secret
+      valuesKey: ssh_password
