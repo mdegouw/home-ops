@@ -22,6 +22,9 @@ spec:
     remediation:
       retries: 3
   values:
+    envFrom:
+      - secretRef:
+        name: democratic-csi-freenas-iscsi-secret
     csiDriver:
       name: "org.democratic-csi.iscsi"
 
@@ -52,30 +55,22 @@ spec:
           port: 80
           # This is the API key that we generated previously
           apiKey:
-            valueFrom:
-              secretKeyRef:
-                name: democratic-csi-freenas-iscsi-secret
-                key: api_key
+            name: democratic-csi-freenas-iscsi-secret
+            key: api_key
           username:
-            valueFrom:
-              secretKeyRef:
-                name: democratic-csi-freenas-iscsi-secret
-                key: api_user
+            name: democratic-csi-freenas-iscsi-secret
+            key: api_user
           allowInsecure: true
           apiVersion: 2
         sshConnection:
           host: 192.168.178.241
           port: 22
           username:
-            valueFrom:
-              secretKeyRef:
-                name: democratic-csi-freenas-iscsi-secret
-                key: ssh_user
+            name: democratic-csi-freenas-iscsi-secret
+            key: ssh_user
           password:
-            valueFrom:
-              secretKeyRef:
-                name: democratic-csi-freenas-iscsi-secret
-                key: ssh_password
+            name: democratic-csi-freenas-iscsi-secret
+            key: ssh_password
         zfs:
           # the example below is useful for TrueNAS 12
           cli:
