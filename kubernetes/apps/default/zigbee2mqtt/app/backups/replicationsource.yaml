@@ -14,8 +14,8 @@ spec:
     pruneIntervalDays: 10
     repository: zigbee2mqtt-restic-secret
     cacheCapacity: 2Gi
-    volumeSnapshotClassName: csi-ceph-blockpool
-    storageClassName: ceph-block
+    volumeSnapshotClassName: freenas-iscsi-csi
+    storageClassName: freenas-iscsi-csi
     retain:
       daily: 10
       within: 3d
