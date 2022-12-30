@@ -46,7 +46,7 @@ spec:
       - name: freenas-iscsi-csi
         parameters:
       # if true, snapshots will be created with zfs send/receive
-        detachedSnapshots: "false"
+        detachedSnapshots: "true"
         secrets:
           snapshotter-secret:
 
