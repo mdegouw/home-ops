@@ -109,4 +109,4 @@ spec:
     - targetPath: auth.rootPassword
       kind: Secret
       name: minio-secret
-      valuesKey: rootPassword
+      valuesKey: MINIO_ROOT_PASSWORD
