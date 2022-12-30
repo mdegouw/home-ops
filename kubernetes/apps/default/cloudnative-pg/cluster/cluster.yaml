@@ -15,9 +15,9 @@ spec:
     storageClass: freenas-iscsi-csi
   superuserSecret:
     name: cloudnative-pg-secret
-  bootstrap:
-    recovery:
-      source: postgres-v1
+  # bootstrap:
+  #   recovery:
+  #     source: postgres-v1
   postgresql:
     parameters:
       max_connections: "300"
