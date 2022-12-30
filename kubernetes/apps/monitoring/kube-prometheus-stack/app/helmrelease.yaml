@@ -97,7 +97,7 @@ spec:
           hajimari.io/appName: "Alert Manager"
           hajimari.io/icon: mdi:alert-decagram-outline
         hosts:
-          - &host alert-manager.devbu.io
+          - &host alert-manager.${SECRET_DOMAIN}
         tls:
           - hosts:
               - *host
@@ -107,7 +107,7 @@ spec:
         storage:
           volumeClaimTemplate:
             spec:
-              storageClassName: ceph-block
+              storageClassName: freenas-iscsi-csi
               resources:
                 requests:
                   storage: 1Gi
@@ -145,27 +145,27 @@ spec:
     kubeControllerManager:
       enabled: true
       endpoints:
-        - 192.168.42.10
-        - 192.168.42.11
-        - 192.168.42.12
+        - 192.168.178.161
+        - 192.168.178.162
+        - 192.168.178.163
     kubeScheduler:
       enabled: true
       endpoints:
-        - 192.168.42.10
-        - 192.168.42.11
-        - 192.168.42.12
+        - 192.168.178.161
+        - 192.168.178.162
+        - 192.168.178.163
     kubeProxy:
       enabled: true
       endpoints:
-        - 192.168.42.10
-        - 192.168.42.11
-        - 192.168.42.12
+        - 192.168.178.161
+        - 192.168.178.162
+        - 192.168.178.163
     kubeEtcd:
       enabled: true
       endpoints:
-        - 192.168.42.10
-        - 192.168.42.11
-        - 192.168.42.12
+        - 192.168.178.161
+        - 192.168.178.162
+        - 192.168.178.163
       service:
         enabled: true
         port: 2381
@@ -179,7 +179,7 @@ spec:
           hajimari.io/icon: simple-icons:prometheus
         pathType: Prefix
         hosts:
-          - &host prometheus.devbu.io
+          - &host prometheus.${SECRET_DOMAIN}
         tls:
           - hosts:
               - *host
@@ -196,7 +196,7 @@ spec:
           nginx.ingress.kubernetes.io/backend-protocol: "GRPC"
           hajimari.io/enable: "false"
         hosts:
-          - &host thanos-sidecar.devbu.io
+          - &host thanos-sidecar.${SECRET_DOMAIN}
         tls:
           - hosts:
               - *host
@@ -221,7 +221,7 @@ spec:
         storageSpec:
           volumeClaimTemplate:
             spec:
-              storageClassName: ceph-block
+              storageClassName: freenas-iscsi-csi
               resources:
                 requests:
                   storage: 50Gi

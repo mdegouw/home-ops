@@ -42,6 +42,14 @@ spec:
           node-publish-secret:
           controller-expand-secret:
 
+    volumeSnapshotClasses:
+      - name: freenas-iscsi-csi
+        parameters:
+      # if true, snapshots will be created with zfs send/receive
+        detachedSnapshots: "false"
+        secrets:
+          snapshotter-secret:
+
     driver:
       config:
         driver: freenas-iscsi

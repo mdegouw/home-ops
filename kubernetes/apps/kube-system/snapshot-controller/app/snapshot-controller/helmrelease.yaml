@@ -26,15 +26,15 @@ spec:
       retries: 3
   values:
     replicaCount: 3
-    volumeSnapshotClasses:
-      - name: freenas-pool
-        driver: freenas-iscsi
-        annotations:
-          snapshot.storage.kubernetes.io/is-default-class: "true"
-        parameters:
-          clusterID: democratic-csi
-          csi.storage.k8s.io/snapshotter-secret-name: freenas-pool-provisioner
-          csi.storage.k8s.io/snapshotter-secret-namespace: kube-system
-        deletionPolicy: Delete
+    # volumeSnapshotClasses:
+    #   - name: freenas-pool
+    #     driver: freenas-iscsi
+    #     annotations:
+    #       snapshot.storage.kubernetes.io/is-default-class: "true"
+    #     parameters:
+    #       clusterID: democratic-csi
+    #       csi.storage.k8s.io/snapshotter-secret-name: freenas-pool-provisioner
+    #       csi.storage.k8s.io/snapshotter-secret-namespace: kube-system
+    #     deletionPolicy: Delete
     serviceMonitor:
       create: true
