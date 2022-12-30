@@ -54,8 +54,7 @@ spec:
       enabled: false
     persistence:
       enabled: true
-      storageClass: freenas-iscsi-csi
-      size: 100Mi
+      existingClaim: emqx-config
     affinity:
       podAntiAffinity:
         preferredDuringSchedulingIgnoredDuringExecution:
