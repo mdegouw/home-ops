@@ -8,11 +8,10 @@ spec:
   interval: 15m
   chart:
     spec:
-      chart: app-template
-      version: 1.2.0
+      chart: minio
       sourceRef:
         kind: HelmRepository
-        name: bjw-s
+        name: bitnami
         namespace: flux-system
   install:
     createNamespace: true
@@ -22,23 +21,9 @@ spec:
     remediation:
       retries: 3
   values:
-    controller:
-      annotations:
-        reloader.stakater.com/auto: "true"
-    image:
-      repository: quay.io/minio/minio
-      tag: RELEASE.2022-12-12T19-27-27Z
-    env:
-      TZ: ${TIMEZONE}
-      MINIO_UPDATE: "off"
-      MINIO_PROMETHEUS_URL: http://kube-prometheus-stack-prometheus.monitoring.svc.cluster.local:9090
-      MINIO_PROMETHEUS_JOB_ID: minio
-      MINIO_BROWSER_REDIRECT_URL: https://minio.${SECRET_DOMAIN}
-      MINIO_SERVER_URL: https://s3.${SECRET_DOMAIN}
-    envFrom:
-      - secretRef:
-          name: minio-secret
-    args: ["server", "/data", "--console-address", ":9001"]
+    global:
+      storageClass: "freenas-iscsi-csi"
+
     service:
       main:
         enabled: true
@@ -116,3 +101,12 @@ spec:
         cpu: 100m
       limits:
         memory: 750Mi
+  valuesFrom:
+    - targetPath: auth.rootUser
+      kind: Secret
+      name: minio-secret
+      valuesKey: MINIO_ROOT_USER
+    - targetPath: auth.rootPassword
+      kind: Secret
+      name: minio-secret
+      valuesKey: rootPassword
