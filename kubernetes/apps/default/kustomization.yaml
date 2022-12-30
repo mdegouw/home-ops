@@ -12,3 +12,4 @@ resources:
   - ./smtp-relay/ks.yaml
   - ./cloudnative-pg/ks.yaml
   - ./authelia/ks.yaml
+  - ./zigbee2mqtt/ks.yaml
