@@ -28,7 +28,7 @@ spec:
     replicaCount: 3
     volumeSnapshotClasses:
       - name: freenas-pool
-        driver: org.democratic-csi.iscsi
+        driver: freenas-iscsi
         annotations:
           snapshot.storage.kubernetes.io/is-default-class: "true"
         parameters:
