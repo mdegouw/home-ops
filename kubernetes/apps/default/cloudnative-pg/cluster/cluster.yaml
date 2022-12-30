@@ -14,7 +14,7 @@ spec:
     size: 20Gi
     storageClass: freenas-iscsi-csi
   superuserSecret:
-    name: cloudnative-pg-superuser-secret
+    name: cloudnative-pg-secret
   bootstrap:
     recovery:
       source: postgres-v1
