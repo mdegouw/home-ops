@@ -6,13 +6,13 @@ resources:
   # Pre Flux-Kustomizations
   - ./namespace.yaml
   # # Flux-Kustomizations
-  # - ./blackbox-exporter/ks.yaml
-  # - ./grafana/ks.yaml
-  # - ./kube-prometheus-stack/ks.yaml
+  - ./blackbox-exporter/ks.yaml
+  - ./grafana/ks.yaml
+  - ./kube-prometheus-stack/ks.yaml
   # - ./loki/ks.yaml
   # - ./smartctl-exporter/ks.yaml
   # # - ./snmp-exporter/ks.yaml # TODO: Setup if i'm gonna use it
-  # - ./thanos/ks.yaml
+  - ./thanos/ks.yaml
   # - ./unpoller/ks.yaml
   # - ./uptimerobot-heartbeat/ks.yaml
   # - ./vector/ks.yaml
