@@ -5,7 +5,7 @@ metadata:
   name: minio-nfs
 spec:
   capacity:
-    storage: 1Mi
+    storage: 20Gi
   accessModes: ["ReadWriteMany"]
   storageClassName: minio-nfs
   persistentVolumeReclaimPolicy: Retain
