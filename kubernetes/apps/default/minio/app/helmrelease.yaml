@@ -25,7 +25,10 @@ spec:
       storageClass: "freenas-iscsi-csi"
 
     persistence:
-      storageClass: "freenas-iscsi-csi"
+      config:
+        enabled: true
+        existingClaim: minio-nfs
+        mountPath: /data
 
     ingress:
       enabled: true
