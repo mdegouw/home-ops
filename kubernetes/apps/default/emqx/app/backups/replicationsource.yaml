@@ -15,7 +15,7 @@ spec:
     repository: emqx-restic-secret
     cacheCapacity: 2Gi
     volumeSnapshotClassName: freenas-iscsi-csi
-    storageClassName: freenas-iscsi-csi
+    storageClassName: freenas-nfs-csi
     retain:
       daily: 10
       within: 3d
