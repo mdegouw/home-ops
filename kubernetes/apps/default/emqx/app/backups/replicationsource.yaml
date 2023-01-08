@@ -6,7 +6,7 @@ metadata:
   name: emqx
   namespace: default
 spec:
-  sourcePVC: config-emqx-0
+  sourcePVC: emqx-config
   trigger:
     schedule: "0 0 * * *"
   restic:
