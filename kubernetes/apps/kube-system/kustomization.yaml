@@ -5,7 +5,7 @@ resources:
   - ./namespace.yaml
   - ./metrics-server/ks.yaml
   - ./reloader/ks.yaml
-  - ./descheduler/ks.yaml
+  # - ./descheduler/ks.yaml # Need to setp correctly before enabling
   - ./node-feature-discovery/ks.yaml
   - ./democratic-csi/ks.yaml
   - ./snapshot-controller/ks.yaml
