@@ -9,6 +9,7 @@ metadata:
 spec:
   dependsOn:
     - name: cluster-apps-onepassword-connect
+    - name: cluster-apps-democratic-csi-freenas-iscsi
   interval: 10m
   path: ./kubernetes/apps/default/minio/app
   prune: true
