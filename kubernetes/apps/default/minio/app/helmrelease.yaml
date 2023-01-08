@@ -21,8 +21,8 @@ spec:
     remediation:
       retries: 3
   values:
-    global:
-      storageClass: "freenas-iscsi-csi"
+    # global:
+    #   storageClass: "freenas-iscsi-csi"
 
     persistence:
       config:
