@@ -9,7 +9,7 @@ metadata:
 spec:
   dependsOn:
     - name: cluster-apps-democratic-csi-freenas-iscsi
-    - name: cluster-apps-volsync
+    - name: cluster-apps-volsync-app
   path: ./kubernetes/apps/default/changedetection/app
   prune: true
   sourceRef:
