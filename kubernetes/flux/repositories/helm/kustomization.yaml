@@ -10,6 +10,7 @@ resources:
   - ./calico.yaml
   - ./cloudnative-pg.yaml
   - ./csi-driver-nfs.yaml
+  - ./democratic-csi.yaml
   - ./descheduler.yaml
   - ./emqx.yaml
   - ./external-dns.yaml
@@ -19,7 +20,9 @@ resources:
   - ./ingress-nginx.yaml
   - ./intel.yaml
   - ./jetstack.yaml
+  - ./k8s-gateway.yaml
   - ./kyverno.yaml
+  - ./metallb.yaml
   - ./metrics-server.yaml
   - ./node-feature-discovery.yaml
   - ./piraeus.yaml
