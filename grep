@@ -1,0 +1,2000 @@
+code .
+cd /mnt/c/Users/mathi/Downloads/l/
+ls -la
+./serverinstall_96_2274 
+./serverinst
+./serveri
+ls
+ls -la
+./serverinstall_100_2277 
+cd /mnt/c/Users/mathi/Downloads/
+cd j
+gpg
+LC_ALL=C tr -dc '[:upper:]' < /dev/urandom | fold -w 20 | head -n1
+gpg-connect-agent
+echo "SCD RANDOM 512" | gpg-connect-agent | sudo tee /dev/random | hexdump -C
+cat /proc/sys/kernel/random/entropy_avail
+ls -la
+ln -s 
+ln -S
+ln -s
+ln -s --help
+ln -s /mnt/c/Users/mathi/ windows_home
+ls -la
+cd windows_home
+ls -la
+cd Documents/
+lsa -la
+ls -la
+cd ..
+cd OneDrive/Documenten/
+ls -la
+cd
+mkdir gnupg-workspace
+export GNUPGHOME=~/gnupg-workspace
+cd gnupg-workspace/
+ls -la
+wget -O $GNUPGHOME/gpg.conf https://raw.githubusercontent.com/drduh/config/master/gpg.conf
+grep -ve "^#" $GNUPGHOME/gpg.conf
+LC_ALL=C tr -dc '[:upper:]' < /dev/urandom | fold -w 20 | head -n1
+LC_ALL=C tr -dc '[:upper:]' < /dev/urandom | fold -w 30 | head -n1
+LC_ALL=C tr -dc '[:upper:]' < /dev/urandom | fold -w 32 | head -n1
+gpg --expert --full-generate-key
+ls -la
+ls -la openpgp-revocs.d/
+export KEYID=kZ7vcWtH3tCrAVQYKFcvCs3Wh@LpJLj2
+export KEYID=0xD77552C0A2670C3F
+KEYID
+$KEYID
+gpg --expert --edit-key $KEYID
+gpg -K
+gpg --armor --export-secret-keys $KEYID > $GNUPGHOME/mastersub.key
+gpg --armor --export-secret-subkeys $KEYID > $GNUPGHOME/sub.key
+ls -la
+gpg --output $GNUPGHOME/revoke.asc --gen-revoke $KEYID
+ls -lA
+cp [ sub.key mastersub.key revoke.asc ] ~/windows_home/Downloads/GPG/
+cp sub.key mastersub.key revoke.asc  ~/windows_home/Downloads/GPG/
+ls -la
+gpg --card-edit
+gpg --expert --edit-key $KEYID
+gpg --armor --export-secret-subkeys $KEYID > $GNUPGHOME/sub-NEW.key
+cp sub.key mastersub.key revoke.asc sub-NEW.key  ~/windows_home/Downloads/GPG/
+
+gpg --expert --edit-key $KEYID
+gpg --armor --export-secret-subkeys $KEYID > $GNUPGHOME/sub.key
+cp sub.key mastersub.key revoke.asc  ~/windows_home/Downloads/GPG/
+gpg --armor --export-secret-subkeys $KEYID > $GNUPGHOME/sub.key
+gpg --expert --edit-key $KEYID
+gpg --armor --export-secret-subkeys $KEYID > $GNUPGHOME/sub.key
+cp sub.key mastersub.key revoke.asc  ~/windows_home/Downloads/GPG/
+echo $KEYID
+gpg --expert --edit-key $KEYID
+gpg --list-keys
+gpg --expert --edit-key $KEYID
+gpg --armor --export-secret-keys $KEYID > $GNUPGHOME/mastersub.key
+gpg --armor --export-secret-subkeys $KEYID > $GNUPGHOME/sub.key
+gpg --output $GNUPGHOME/revoke.asc --gen-revoke $KEYID
+ls -la
+cp sub.key mastersub.key revoke.asc  ~/windows_home/Downloads/GPG/
+gpg --armor --export $KEYID | sudo tee gpg-$KEYID-$(date +%F).asc
+ls -la
+cp gpg-0xD77552C0A2670C3F-2022-12-11.asc ~/windows_home/Downloads/GPG/
+gpg --list-keys
+ECHO $keyid
+echo $KEYID
+ssh -A
+$ export SSH_AUTH_SOCK=/mnt/c/wsl-ssh-pageant/ssh-agent.sock
+export SSH_AUTH_SOCK=/mnt/c/wsl-ssh-pageant/ssh-agent.sock
+ssh mathijs@amp.mdegouw.nl
+set SSH_AUTH_SOCK=\\.\pipe\ssh-pageant
+ssh
+ssh -A
+ssh mathijs@amp.mdegouw.nl
+export SSH_AUTH_SOCK=/mnt/c/wsl-ssh-pageant/ssh-agent.sock
+ssh mathijs@amp.mdegouw.nl
+ls -la /mnt/c/wsl-ssh-pageant/
+ssh mathijs@amp.mdegouw.nl
+export SSH_AUTH_SOCK=/mnt/c/Users/mathi/wincrypt-wsl.sock
+ssh amp.mdegouw.nl
+ssh mathijs@amp.mdegouw.nl
+cd .ssh/
+ls -la
+cat id_rsa
+cat id_rsa.pub 
+ssh-keygen
+cd ..
+ls -la
+cat OPNsense_rsa
+cat OPNsense_rsa.pub 
+rm -Rf OPNsense_rsa*
+kubectl
+brew install fluxcd/tap/flux
+curl -s https://fluxcd.io/install.sh | sudo bash
+flux
+nano ~/.profile 
+bash
+flux 
+flux check --pre
+export GITHUB_TOKEN=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
+export GITHUB_USER=mdegouw
+flux bootstrap github   --owner=$GITHUB_USER   --repository=fleet-infra   --branch=main   --path=./clusters/my-cluster   --personal
+curl --silent --location "https://github.com/weaveworks/weave-gitops/releases/download/v0.13.0/gitops-$(uname)-$(uname -m).tar.gz" | tar xz -C /tmp
+sudo mv /tmp/gitops /usr/local/bin
+gitops version
+curl --silent --location "https://github.com/weaveworks/weave-gitops/releases/download/v0.13.0/gitops-$(uname)-$(uname -m).tar.gz" | tar xz -C /tmp
+sudo mv /tmp/gitops /usr/local/bin
+gitops version
+git clone https://github.com/$GITHUB_USER/fleet-infra
+git clone git@github.com:mdegouw/fleet-infra.git
+cd fleet-infra/
+ls -la
+PASSWORD="Jojomatjo1!"
+PASWORD
+ECHO PASSWORD
+echo PASSWORD
+echo $PASSWORD
+gitops create dashboard ww-gitops   --password=$PASSWORD   --export > ./clusters/my-cluster/weave-gitops-dashboard.yaml
+cat ./clusters/my-cluster/weave-gitops-dashboard.yaml
+git add -A && git commit -m "Add Weave GitOps Dashboard"
+git push
+kubectl get pods -n flux-system
+kubectl get pods 
+kubectl get pods -n akk
+kubectl get pods -n all
+kubectl get pods --all-namespaces
+kubectl -n kubernetes-dashboard create token admin-user
+kubectl apply
+kubectl apply -k
+kubectl apply --help
+nano admin-user.yaml
+nano role.yaml
+kubectl apply -f admin-user.yaml 
+kubectl apply -f role.yaml 
+kubectl -n kubernetes-dashboard create token admin-user
+kubectl get pods -n all
+kubectl get pods --all-namespaces
+watch kubectl get pods --all-namespaces
+watch --help
+watch -n 1 kubectl get pods --all-namespaces
+flux
+task precommit:init
+task
+brew install go-task/tap/go-task
+ansible
+gitops
+apt install go-task
+sudo su
+ipcalc
+sudo apt install ipcalc
+jq
+sudo apt install jq
+bectl
+kubctl
+kubectl
+pre-commit
+sudo apt install pre-commit
+sops
+sudo apt install sops]
+sudo apt install sops
+wget https://github.com/mozilla/sops/releases/download/v3.7.3/sops_3.7.3_amd64.deb
+dpkg -i sops_3.7.3_amd64.deb 
+sudo dpkg -i sops_3.7.3_amd64.deb 
+sops
+rm -Rf sops_3.7.3_amd64.deb 
+terraform
+yq
+sudo su
+cd /mnt/f/Repos/flux-test/
+task precommit:init
+ls -la
+bash
+direnv allow
+bash
+sops --encrypt secret.sops.yaml 
+ls -la
+code
+ls -la
+cd windows_home
+cd ..
+apt install age
+sudo su
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
+echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
+brew install yq
+yq
+brew install go-task/tap/go-task
+cd /mnt/f/Repos/flux-test/
+ls -la
+helm
+sudo apt install direnv
+nano ~/.bashrc 
+brew install helm
+brew install kustomize
+prettier
+sudo apt install prettier
+snap install prettier
+snap
+sudo snap
+sudo snap install
+sudo apt install snapd
+sudo snap install prettier --beta
+brew install stern
+pip install --user yamllint
+code
+code .
+task init
+brew
+task
+cd /mnt/f/Repos/flux-test/
+ls -la
+task precommit:init
+task precommit:update
+age-keygen -o age.agekey
+ls -la
+mkdir -p ~/.config/sops/age
+mv age.agekey ~/.config/sops/age/keys.txt
+nano ~/.bashrc
+source ~/.bashrcnano .config.sample.env 
+mv .config.sample.env .config
+nano .config 
+cp .config .config.sample.env
+mv .config .config.env
+nano .config.sample.env 
+nano .config.env 
+task verify
+nano .config.env 
+task verify
+nano .config.env 
+ls -la ~/.s
+ls -la ~/.ssh/
+ssh-copy-id mathijs@192.168.178.161
+ssh mathijs@192.168.178.161
+nano .config.
+nano .config
+nano .config.env 
+task verify
+task configure
+ls -la
+nano tmpl/terraform/secret.sops.yaml 
+nano tmpl/ansible/kube-vip.yml 
+gitops
+gitops help
+task configure
+task ansible:init
+task ansible:list
+task ansible:ping
+task ansible:prepare
+task ansible:reboot
+task ansible:ping
+task ansible:install
+task cluster:nodes
+task terraform:init
+task terraform:plan
+task terraform:apply
+task cluster:verify
+git add -A
+git commit -m "Initial commit :rocket:"
+git push
+task cluster:install
+task cluster:pods -- -n flux-system
+task cluster:resources
+task cluster:gitrepositories
+task cluster:kustomizations
+task cluster:ingresses
+cat .config.env 
+ls -la
+cat kubeconfig 
+kubectl
+kubectl get pods
+kubectl get pods --all-namespaces
+flux
+git add .
+git add -A
+git commit -m "Initial commit :rocket:"
+git push
+flux reconc
+flux reconcile
+flux reconcile source git
+flux reconcile source git flux-system
+flux reconcile source git cluster
+kubectl
+task cluster:gitrepositories
+nano .config.env 
+task cluster:gitrepositories
+flux reconcile source git home-kubernetes
+task cluster:gitrepositories
+task cluster:pods
+task cluster:certificates
+task cluster:ingresses
+flux re
+kubectl logs 
+kubectl get pods
+kubectl get pods -n flux-system
+kubectl get pods --all-namespaces
+kubectl logs -f external-dns-568bcfcd9b-hjf5f -n networking
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+kubectl logs -f external-dns-568bcfcd9b-hjf5f -n networking
+kubectl get pods --all-namespaces
+kubectl logs -f external-dns-56684888df-dz6lv -n networking
+task cluster:ingresses
+nano .config.env 
+kubectl get services
+kubectl get ingress
+kubectl get ingress --all-namespaces
+kubectl get services --all-namespaces
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+kubectl get ingress --all-namespaces
+kubectl get services --all-namespaces
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+kubectl get services --all-namespaces
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+kubectl logs -f external-dns-56684888df-dz6lv -n networking
+kubectl get pods -n networking
+kubectl logs -f external-dns-568bcfcd9b-28g9c -n networking
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+kubectl get pods -n networking
+kubectl logs -f external-dns-6c4749ccd7-68nbt -n networking
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+task cluster:certificates
+kubectl get
+kubectl get -h
+kubectl get certificate
+kubectl get certificaterequest
+kubectl get certificaterequest --all-namespaces
+kubectl get certificaterequest -n networking mdegouw-nl-fvmbd
+kubectl describe certificaterequest -n networking mdegouw-nl-fvmbd
+kubectl describe certificaterequest -n networking 
+kubectl describe certificateorder -n networking 
+kubectl describe certificaterequest -n networking 
+kubectl get certificaterequest -n networking mdegouw-nl-fvmbd
+kubectl get certificaterequest -n networking
+task cluster:certificates
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+kubectl logs -f external-dns-6c4749ccd7-68nbt -n networking
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+kubectl logs -f external-dns-6c4749ccd7-68nbt -n networking
+git add -A
+flux reconcile source git home-kubernetes
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+kubectl logs -f external-dns-6c4749ccd7-68nbt -n networking
+git add -A
+git commit -m "Initial commit :rocket:"
+task cluster:certificates
+kubectl logs -f external-dns-6c4749ccd7-68nbt -n networking
+flux reconcile source git home-kubernetes
+task cluster:certificates
+kubectl logs -f external-dns-6c4749ccd7-68nbt -n networking
+task cluster:certificates
+echo $BOOTSTRAP_METALLB_K8S_GATEWAY_ADDR
+echo $METALLB_K8S_GATEWAY_ADDR
+git add -A
+git commit -m "Initial commit :rocket:"
+kubectl -n flux-system get receiver/github-receiver --kubeconfig=./kubeconfig
+git add -A
+git commit -m "Initial commit :rocket:"
+git add -A
+git commit -m "Initial commit :rocket:"
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+task cluster:pods
+kubectl get namespace
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+task cluster:pods
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+task cluster:pods
+cd /tmp/
+git clone https://github.com/SynologyOpenSource/synology-csi.git
+cd synology-csi
+cp config/client-info-template.yml config/client-info.yml
+config/client-info.yml
+sudo su
+nano config/client-info.yml
+./scripts/deploy.sh run
+./scripts/deploy.sh install --basic
+ls -la
+ls -la scripts/
+ls -la deploy/
+ls -la deploy/kubernetes/
+ls -la deploy/example/
+cat deploy/example/storageclass-smb.yaml 
+ls -la
+ls -la config/
+cat config/client-info
+cat config/client-info.yml 
+kubectl get secret 
+kubectl get secret --all-namespaces
+kubectl get secret -n synology-csi client-info-secret
+kubectl describe secret -n synology-csi client-info-secret
+export GITHUB_TOKEN=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
+export GITHUB_USER=mdegouw
+flux bootstrap github   --owner=$GITHUB_USER   --repository=fleet-infra   --branch=main   --path=./clusters/my-cluster   --personal
+flux bootstrap github   --owner=$GITHUB_USER   --repository=fleet-infra   --branch=main   --path=./clusters/my-cluster   --personal
+PASSWORD="Jojomatjo1!"
+gitops create dashboard ww-gitops   --password=$PASSWORD   --export > ./clusters/my-cluster/weave-gitops-dashboard.yaml
+cd /mnt/f/Repos/fleet-infra/
+gitops create dashboard ww-gitops   --password=$PASSWORD   --export > ./clusters/my-cluster/weave-gitops-dashboard.yaml
+watch -n 1 kubectl get pods -n flux-system
+cd ..
+pwd
+export REPO=fleet-infra-test01
+cd /mnt/f/Repos/$REPO
+export GITHUB_TOKEN=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
+export GITHUB_USER=mdegouw
+export REPO=fleet-infra-test01
+flux bootstrap github   --owner=$GITHUB_USER   --repository=$REPO   --branch=main   --path=./cluster/base   --personal
+git clone git@github.com:mdegouw/$REPO.git && cd /mnt/f/Repos/$REPO
+git commit -A
+git commit -A -C "All"
+git add .
+git commit -m "Add existing file"
+ls -la
+git push
+git add .
+git commit -m "Add existing file"
+git push
+git add .
+git commit -m "Add existing file"
+git push
+git add .
+git commit -m "Add existing file"
+git push
+git add .
+git commit -m "Add existing file"
+git add .
+git commit -m "Add existing file"
+git push
+git add .
+git commit -m "Add existing file"
+git push
+cd /mnt/f/Repos/flux-test/
+ls -la
+kubectl get pods
+code .
+git add- A
+git add -A
+git add .
+git commit -m "Add existing file"
+kubectl version
+git add .
+git add -A
+git commit -m "Add existing file"
+kubectl version
+code .
+curl --insecure -sfL https://192.168.178.122:8443/v3/import/wfk7m7g9jkxlv7kdtjkcsr9j52tgdclrnmj6kv2vkhkbdhdf65xvfr_c-4jjlz.yaml | kubectl apply -f -
+kubectl get pods --all-namespcaes
+kubectl get pods --all-namespaces
+kubectl describe pod -n cattle-system cattle-cluster-agent-6c765b7888-zsfqs
+kubectl get pods --all-namespaces
+kubectl describe pod -n cattle-system cattle-cluster-agent-6c765b7888-zsfqs
+kubectl logs -n cattle-system cattle-cluster-agent-6c765b7888-zsfqs
+exit
+cd /mnt/f/Repos/home-ops/
+watch -n kubectl get pods --all-namespaces
+kubectl
+watch -n 1 kubectl get pods --all-namespaces
+cd /mnt/f/Repos/home-ops/
+direnv allow
+ls -la
+code .
+task init
+task precommit:init
+task precommit:update
+cat ~/.config/sops/age/keys.txt
+task verify
+task configure
+git add -A
+git commit -m "Initial setup :rocket:"
+task configure
+task verify
+ssh-copy-id 192.168.178.161
+nano ~/.ssh/known_hosts
+ssh-copy-id 192.168.178.161
+ssh-keygen -f "/home/mathijs/.ssh/known_hosts" -R "192.168.178.161"
+ssh-copy-id 192.168.178.161
+ssh-copy-id 192.168.178.162
+ssh-copy-id 192.168.178.163
+task verify
+task configure
+task ansible:init
+task ansible:list
+task ansible:ping
+task ansible:prepare
+task ansible:ping
+task ansible:install
+task cluster:nodes
+git add -A
+git commit -m "Initial setup :rocket:"
+task cluster:install
+task cluster:pods -- -n flux-system
+kubectl -n flux-system get receiver/github-receiver --kubeconfig=./kubeconfig
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile 
+flux reconcile source git home-kubernetes
+kubectl logs -f -n networking external-dns-568bcfcd9b-tcq2k
+10
+19
+10
+cd /mnt/f/Repos/home-ops/
+kubectl get pods
+watch -n 1 kubectl get pods
+flux reconcile source git cluster-apps-glauth-app
+flux reconcile kustomization cluster-apps-glauth-app
+flux reconcile kustomization 
+flux reconcile kustomization cluster-apps-glauth-app -n flux-system
+kubectl get pods
+kubectl get pods --all-namespaces
+kubectl get pods
+watch -n 1 kubectl get pods
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+watch -n 1 kubectl get pods
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+watch -n 1 kubectl get pods
+kubectl describe minio-57bb885787-lsvb9
+watch -n 1 kubectl get pods
+kubectl describe minio-57bb885787-lsvb9
+kubectl describe pod minio-57bb885787-lsvb9
+ssh 192.168.178.162
+ssh 192.168.178.163
+kubectl describe minio-57bb885787-lsvb9
+kubectl describe pod minio-57bb885787-lsvb9
+kubectl describe pod 
+kubectl describe pod min*
+kubectl describe pod min
+kubectl get pv
+kubectl get pc
+kubectl get pvc
+kubectl describe pod min
+kubectl delete pod min
+kubectl delete pod minio-57bb885787-nn6zl
+kubectl describe pod min
+kubectl get pv
+kubectl get pvc
+kubectl delete pvc minio-nfs
+kubectl get pvc
+kubectl delete pv minio-nfs
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+kubectl get pv
+kubectl describe pod min
+kubectl describe pod min --watch
+kubectl describe pod min
+watch -n 1 kubectl describe pod min
+kubectl describe pod min
+kubectl get pods
+kubectl describe pod min
+kubectl get pods
+kubectl describe pod min
+kubectl get pods
+kubectl delete pod minio-57bb885787-46mnq
+kubectl get pods
+kubectl describe pod min
+kubectl get pods
+kubectl describe pod min
+kubectl get pods
+kubectl describe pod min
+kubectl logs -f  pod min
+kubectl logs -f min
+kubectl logs -f minio-79d7c5d578-gs6bv
+kubectl describe pod min
+kubectl logs -f minio-79d7c5d578-gs6bv
+kubectl get storageclass
+kubectl get pv
+kubectl delete minio-nfs
+kubectl delete pv minio-nfs
+kubectl delete pvc minio-nfs
+kubectl get pv
+kubectl get pvc
+kubectl logs -f minio-79d7c5d578-gs6bv
+kubectl logs -f min
+kubectl delete pvc minio-nfs
+kubectl get pvc
+kubectl delete pvc minio-nfs
+kubectl get pods
+kubectl describe pod mino
+kubectl describe pod min
+kubectl get pvc
+kubectl get pv
+kubectl describe pod min
+kubectl get pv
+kubectl describe pod min
+kubectl get pv
+kubectl get pvc
+kubectl get pv
+kubectl describe pod min
+kubectl get pv
+kubectl describe pod min
+kubectl delete pod minio-57bb885787-np8z6
+kubectl describe pod min
+kubectl describe deployment
+kubectl describe deployment min
+kubectl delete deployment minio
+kubectl describe pod min
+kubectl get kustomization cluster-apps-minio-app -n flux-system 
+kubectl get kustomization cluster-apps-minio-app -n flux-system -o yaml
+kubectl describe pod min
+kubectl get pv
+kubectl get pvc
+kubectl describe pod min
+kubectl describe pod 
+kubectl get pod
+kubectl describe pod min
+kubectl get pod
+kubectl describe pod min
+kubectl get pv
+kubectl get pvc
+kubectl delete pvc postgres-1
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+kubectl get pods
+kubectl get pvc
+kubectl get pods
+kubectl get pvc
+kubectl get pods
+kubectl get ingress
+kubectl get service
+kubectl get ingress
+kubectl get pods -n external-secrets
+kubectl get ingress -n external-secrets
+kubectl get service  -n external-secrets
+kubectl get ingress
+kubectl get pods --all-namespasces
+kubectl get pods --all-namespaces
+kubectl get pv
+kubectl get pvc
+kubectl delete pvc redis-data-redis-node-0
+kubectl delete pvc redis-data-redis-node-1
+kubectl delete pvc redis-data-redis-node-2
+kubectl get pv
+kubectl get pods --all-namespaces
+watch -n 1 kubectl get pods --all-namespaces
+watch -n 1 kubectl get pods 
+kubectl get logs postgres-1-full-recovery-k2jmk
+kubectl logs pod postgres-1-full-recovery-k2jmk
+kubectl logs postgres-1-full-recovery-k2jmk
+kubectl logs pod postgres-1-full-recovery-k2jmk
+watch -n 1 kubectl get pods 
+kubectl get pods
+kubectl logs -f minio-6ddc6d9d79-rfdrt
+kubectl get pods
+kubectl get pods --all-namespcaes
+kubectl get pods --all-namespaces
+kubectl logs -f k8s-gateway-59776976f6-hsldg
+kubectl logs -f k8s-gateway-59776976f6-hsldg -n networking
+kubectl get pods --all-namespaces
+cd /mnt/f/Repos/home-ops/
+kubectl get storageclass
+code .
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+kubectl get storageclass
+kubectl get pods
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+kubectl get pods
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+kubectl get pods
+kubectl get storageclass
+kubectl get pods
+kubectl get storageclass
+kubectl get pods
+kubectl get storageclass
+kubectl get pods
+kubectl get storageclass
+kubectl get pods
+kubectl get storageclass
+kubectl get pvc
+kubectl get pods
+kubectl get pvc
+kubectl get pods
+mc
+sudo apt install mc
+mc
+mc alias
+sudo apr remove mc
+sudo apt remove mc
+curl https://dl.min.io/client/mc/release/linux-amd64/mc   --create-dirs   -o $HOME/minio-binaries/mc
+chmod +x $HOME/minio-binaries/mc
+export PATH=$PATH:$HOME/minio-binaries/
+mc --help
+nano ~/.bashrc 
+kubectl get storageclass
+kubectl get pv
+kubectl get pvc
+kubectl get pv
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+age -a
+age -a us
+age
+age -e
+age --encrypt .
+ls -la
+cd config/
+age --encrypt users.sops.toml 
+sops -e users.sops.toml 
+sops -e users.sops.toml --inline
+sops -e users.sops.toml 
+sops -e server.sops.toml 
+sops -e groups.sops.toml 
+cd ../../../smtp-relay/app/
+sops -e secret.sops.yaml 
+cd ../../cloudnative-pg/cluster/
+sops --encrypt secret.sops.yaml 
+cd ../../minio/app/
+sops --encrypt secret.sops.yaml 
+cd ../..
+cd cloudnative-pg/cls
+cd cloudnative-pg/cluster/
+sops --encrypt secret.sops.yaml 
+cd /mnt/f/Repos/home-ops/
+kubectl get pods
+kubectl get secret
+kubectl get secrets
+kubectl get secret echo-server-secret
+kubectl get secret echo-server-secret --output yaml
+kubectl get sewrvice
+kubectl get servicee
+kubectl get service
+kubectl get secrets
+kubectl get pods
+kubectl get ingres
+kubectl get pods
+kubectl get ingress
+kubectl get service
+kubectl get pv
+kubectl get pvc
+kubectl get secrets
+kubectl get pv
+kubectl get pods
+kubectl get pod
+kubectl get pv
+kubectl get pvc
+kubectl get pv
+kubectl get pod
+kubectl logs -f minio-99ff7d779-srzqt
+kubectl describe pod minio-99ff7d779-srzqt
+kubectl get pod
+kubectl get secret
+kubectl get pod
+kubectl describe pod minio-99ff7d779-srzqt
+kubectl get pod
+kubectl describe pod minio-99ff7d779-srzqt
+kubectl logs -f minio-99ff7d779-srzqt
+kubectl describe pod minio-99ff7d779-srzqt
+kubectl get pod
+kubectl describe pod minio-
+kubectl get pod
+kubectl logs -f minio-99ff7d779-rqs7p
+kubectl get pod
+kubectl get pv
+kubectl get pvc
+kubectl get pv
+kubectl describe pv minio
+kubectl describe pvc minio
+ansible
+task ansible:prepare
+kubectl describe pv minio
+kubectl get pods
+kubectl get pods --all-namespaces
+kubectl get pv
+kubectl get pvc
+kubectl get pods --all-namespaces
+kubectl get pods 
+kubectl get pv
+kubectl get pvc
+kubectl get pods 
+kubectl delete pod minio-99ff7d779-5m2mm
+kubectl get pods 
+kubectl get deployment
+kubectl delete deployment mino
+kubectl delete deployment minio
+kubectl get pods 
+kubectl get pv
+kubectl get pvc
+kubectl delete pvc *
+kubectl delete pvc minio-nfs
+kubectl delete pv minio-nfs
+kubectl delete pvc emqx-data-emqx-0
+kubectl delete pvc emqx-data-emqx-1
+kubectl delete pvc emqx-data-emqx-2
+kubectl delete pvc redis-data-redis-node-0
+kubectl delete pvc redis-data-redis-node-1
+kubectl delete pvc redis-data-redis-node-2
+kubectl get pvc
+kubectl get pv
+task ansible:nuke
+task ansible:prepare
+task ansible:install
+kubectl get pods
+kubectl get pods --all-namespaces
+task cluster:install
+kubectl get pods --all-namespaces
+task cluster:install
+task cluster:verify
+task cluster:install
+task configure
+task cluster:install
+task cluster:reconcile
+kubectl get pods --all-namespaces
+kubectl get ingress --all-namespaces
+kubectl get pods --all-namespaces
+kubectl get deployments
+kubectl get deployments -n networking
+kubectl get deployments -n kyverno
+kubectl get namespace
+kubectl get pods --all-namespaces
+flux logs
+flux logs --hel[p
+flux logs --help
+flux logs -A -f
+kubectl get pods --all-namespaces
+flux logs -A -f
+kubectl get nodes
+kubectl get labels
+kubectl get label
+kubectl get nodes
+kubectl get nodes --help
+kubectl label
+kubectl label nodes
+kubectl label nodes kubernetes.io/hostname
+kubectl label nodes kubernetes.io/hostname --help
+kubectl label nodes kubernetes.io/hostname k
+kubectl label nodes kubernetes.io/hostname app.kubernetes.io/instance
+kubectl label nodes kubernetes.io/hostname app.kubernetes.io/instance k
+kubectl label nodes kubernetes.io/hostname app.kubernetes.io/instance=k
+kubectl get resource
+kubectl label nodes app.kubernetes.io/instance=k
+kubectl label nodes app.kubernetes.io/instance
+kubectl label --list
+kubectl label --list nodes
+kubectl label --list nodes k3s-master01
+kubectl label nodes k3s-master01 app.kubernetes.io/instance=kyverno
+kubectl label --list nodes k3s-master01
+kubectl get pods --all-namespaces
+flux logs -A -f
+kubectl label --list nodes k3s-master01
+kubectl label nodes k3s-master01 app.kubernetes.io/instance=kyverno2222
+flux logs -A -f
+kubectl get pods --all-namespaces
+flux logs -A -f
+kubectl get pods --all-namespaces
+task ansible:prepare
+task ansible:install
+task cluster:nodes
+task cluster:verify
+task cluster:install
+kubectl get pods --all-namespaces
+kubectl get pv
+kubectl get pvc
+kubectl get pods --all-namespaces
+watch -n 1 kubectl get pods --all-namespaces
+flux reconcile 
+flux reconcile  kustomization 
+flux reconcile  kustomization kyverno
+flux reconcile  kustomization home-kubernetes
+flux --help
+flux list
+flux list artifacts
+flux list artifacts https://github.com/mdegouw/home-ops
+flux
+flux diff
+flux list
+flux 
+flux  logs
+flux  logs --help
+flux  logs -A -f
+kubectl get pods -n flux-system
+kubectl logs -f -n flux-system helm-controller-c6669c495-z8m67
+flux reconcile
+flux reconcile -n kyverno kyverno
+flux reconcile -n kustomization kyverno kyverno
+flux reconcile -n kyverno kustomization kyverno
+flux reconcile -n kyverno
+flux reconcile kustomization
+flux reconcile kustomization --help
+flux reconcile kustomization kyverno
+flux reconcile kustomization kyverno -n kyverno
+flux reconcile kustomization cluster-apps-kyverno -n kyverno
+flux reconcile kustomization cluster-apps-kyverno 
+flux reconcile kustomization cluster-apps-kyverno --verbose
+task cluster:gitrepositories
+task cluster:kustomizations
+task cluster:helmreleases
+task cluster:helmrepositories
+helm
+helm ls --all-namespaces
+helm uninstall 
+p-template-1.2.0
+reloader                kube-system             1               2022-12-26 13:40:16.241996474 +0000 UTC deployed        reloader-v0.0.126               v0.0.126
+weave-gitops            flux-system             1               2022-12-26 13:40:08.956302983 +0000 UTC deployed        weav
+task cluster:pods
+task cluster:certificates
+task cluster:ingresses
+task cluster:helmreleases
+helm uninstall -n kyverno kyverno
+task cluster:helmreleases
+kubectl get helmreleases
+task cluster:helmreleases
+kubectl delete helmreleases
+kubectl delete helmreleases -n kyverno kyverno
+task cluster:helmreleases
+task cluster:pods
+task cluster:helmreleases
+task cluster:kustomizations
+task cluster:helmreleases
+task cluster:kustomizations
+task cluster:pods
+task cluster:kustomizations
+task cluster:pods
+task cluster:kustomizations
+task cluster:pods
+task cluster:kustomizations
+task cluster:pods
+task cluster:ingresses
+task cluster:pods
+task cluster:ingresses
+task cluster:pods
+kubectl logs -f minio-99ff7d779-fx5rj
+task cluster:pods
+/var/lib/kubelet
+task cluster:pods
+kubectl describe -n kube-system synology-iscsi-democratic-csi-node-nz7xg
+task cluster:pods
+task cluster:gitrepositories
+task cluster:helmreleases
+task cluster:pods
+task cluster:helmreleases
+task cluster:pods
+kubectl logs -f -n kube-system synology-iscsi-democratic-csi-controller-85fb74cb5c-2mnqc
+task cluster:pods
+task cluster:helmreleases
+task cluster:pods
+kubectl get pv
+kubectl get pvc
+kubectl get storageclass
+nano /tmp/test.yaml
+kubectl apply -f /tmp/test.yaml 
+nano /tmp/test.yaml
+kubectl apply -f /tmp/test.yaml 
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+kubectl logs -f -n kube-system synology-iscsi-democratic-csi-controller-85fb74cb5c-2mnqc
+kubectl get pv
+kubectl logs -f -n kube-system synology-iscsi-democratic-csi-controller-85fb74cb5c-2mnqc
+kubectl get crd
+kubectl get crd --all-namespaces
+kubectl get crd --all-namespaces ipam
+kubectl get crd --all-namespaces ipam*
+kubectl get crd --all-namespaces volumesnapshotclasses.snapshot.storage.k8s.io
+kubectl get pods
+kubectl get pods --all-namespaces
+task cluster
+task cluster:pods
+task ansible:reboot
+task cluster
+task cluster:pods
+task ansible:reboot
+task cluster:pods
+kubectl describe pod -n kube-system freenas-iscsi-democratic-csi-controller-db9f58656-rrh8m
+kubectl logs pod -n kube-system freenas-iscsi-democratic-csi-controller-db9f58656-rrh8m
+kubectl logs -n kube-system freenas-iscsi-democratic-csi-controller-db9f58656-rrh8m
+kubectl logs
+kubectl logs --help
+kubectl logs -n kube-system freenas-iscsi-democratic-csi-controller-db9f58656-rrh8m
+kubectl logs -n kube-system freenas-iscsi-democratic-csi-controller-db9f58656-rrh8m -c external-snapshotter
+cd /tmp/
+ssh-keygen -t rsa -C root@truenas.hl.test -f truenas_rsa
+ls -la
+cat truenas_rsa.pub 
+ssh -i truenas_rsa root@192.168.178.241
+cat truenas_rsa
+cd /mnt/f/Repos/home-ops/
+kubectl get pods
+kubectl get pods ---all-namespaces
+kubectl get pods --all-namespaces
+kubectl get pods
+code .
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+kubectl get secrets
+kubectl get pods
+kubectl get pods -n external-secrets
+kubectl logs -f -n external-secrets onepassword-connect-6976bd4dc4-92kfh
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+git add -A
+git commit -m "Initial setup :rocket:"
+task ansible:prepare
+task ansible:install
+task cluster:nodes
+task cluster:install
+task cluster:pods
+watch -n 1 task cluster:pods
+kubectl describe -n kube-system freenas-nfs-democratic-csi-controller-6d57bd64df-2p7dc
+watch -n 1 task cluster:pods
+kubectl describe -n kube-system freenas-nfs-democratic-csi-controller-6d57bd64df-2p7dc
+kubectl describe pod -n kube-system freenas-nfs-democratic-csi-controller-6d57bd64df-2p7dc
+watch -n 1 task cluster:pods
+kubectl logs -f -n kube-system freenas-nfs-democratic-csi-controller-6d57bd64df-2p7dc
+kubectl logs -n kube-system freenas-nfs-democratic-csi-controller-6d57bd64df-2p7dc
+watch -n 1 task cluster:pods
+kubectl apply -f https://github.com/kubernetes-csi/external-snapshotter/raw/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
+kubectl apply -f https://github.com/kubernetes-csi/external-snapshotter/raw/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
+kubectl apply -f https://github.com/kubernetes-csi/external-snapshotter/raw/master/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
+watch -n 1 task cluster:pods
+kubectl logs -n kube-system freenas-nfs-democratic-csi-co
+kubectl logs -n kube-system freenas-nfs-democratic-csi-controller-6d57bd64df-v6snf
+kubectl describe pod -n kube-system freenas-nfs-democratic-csi-controller-6d57bd64df-v6snf
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial setup :rocket:"
+flux reconcile source git home-kubernetes
+k9s
+brew install derailed/k9s/k9s
+k9s
+kubelet
+apt install kubelet
+sudo su
+snap install kubelet
+ls -la /tmp/
+ls -la
+nano nas.ke
+nano nas.key
+ssh -i nas.key root@192.168.178.241
+chmod 006 nas.key 
+ssh -i nas.key root@192.168.178.241
+ls -la
+chmod 600 nas.key 
+ls -la
+ssh -i nas.key root@192.168.178.241
+nano nas.key 
+ssh -i nas.key root@192.168.178.241
+cd /mnt/f/Repos/home-ops/
+k9s
+cd /tmp/
+ls -la
+cd ..
+csd
+cd
+ls -la
+ssh-keygen -p -N "" pem -f nas.key 
+ssh-keygen -p -N "" -m pem -f nas.key 
+ls -la
+cat nas.key 
+cd /mnt/f/Repos/home-ops/
+k9s
+cd /mnt/f/Repos/home-ops/
+k9s
+kubectl get storageclass
+nano /tmp/nfs.yaml
+nano /tmp/iscsi.yaml
+kubectl create -f /tmp/nfs.yaml -f /tmp/iscsi.yaml 
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+k9s
+kubectl get pvc
+k9s
+kubectl get pvc
+k9s
+kubectl get pvc
+k9s
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+task cluster:nuke
+task nuke:cluster
+task ansible:nuke
+task ansible:prepare
+task ansible:install
+task ansible:prepare
+task ansible:reboot
+task ansible:ping
+task ansible:install
+k9s
+task cluster:verify
+k9s
+task cluster:install
+k9s
+kubectl get pvc
+kubectl apply -f /tmp/nfs.yaml -f /tmp/iscsi.yaml 
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+k9s
+cat /tmp/k9s-screens-mathijs/default/kube-system-freenas-nfs-democratic-csi-controller-77c5c86dbb-pfjcc-16720977
+cat /tmp/k9s-screens-mathijs/default/kube-system-freenas-nfs-democratic-csi-controller-77c5c86dbb-pfjcc-1672097753529133935.log 
+k9s
+kubectl get pvc
+k9s
+task cluster:kustomizations
+k9s
+task cluster:kustomizations
+k9s
+kubectl get pvc
+task cluster:kustomizations
+k9s
+task cluster:kustomizations
+kubectl get pvc
+k9s
+kubectl get pvc
+kubectl get secret
+kubectl get secret -n kube_system
+kubectl get secret -n kube-system
+kubectl get secret -n kube-system democratic-csi-freenas-iscsi-secret
+kubectl describe secret -n kube-system democratic-csi-freenas-iscsi-secret
+k9s
+kubectl get secret
+kubectl describe  secret emqx-secret
+kubectl describe secret -n kube-system democratic-csi-freenas-iscsi-secret
+kubectl describe secret -n kube-system democratic-csi-freenas-iscsi-secret -o yaml
+kubectl get secret -n kube-system democratic-csi-freenas-iscsi-secret -o yaml
+k9s
+kubectl describe secret -n kube-system democratic-csi-freenas-iscsi-secret
+kubectl get secret -n kube-system democratic-csi-freenas-iscsi-secret -o yaml
+kubectl get secret -n kube-system democratic-csi-freenas-iscsi-secret 
+kubectl get secret -n kube-system democratic-csi-freenas-iscsi-secret -o yaml
+kubectl get secret -n kube-system democratic-csi-freenas-iscsi-secret -o json
+kubectl get secret -n kube-system democratic-csi-freenas-iscsi-secret -o yaml
+kubectl get secret -n kube-system democratic-csi-freenas-nfs-secret -o yaml
+k9s
+nano /tmp/iscsi.yaml 
+kubectl apply -f /tmp/iscsi.yaml 
+kubectl get pv
+kubectl get pvc
+task ansible:prepare
+task ansible:reboot
+task ansible:install
+task cluster:nodes
+k9s
+task cluster:install
+cluster:reconcile
+task cluster:reconcile
+k9s
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      cd /mnt/f/Repos/home-ops/
+k9s
+helm list
+helm list -n external-secret
+helm list -n external-secrets
+helm list
+helm get 
+helm get echo-server
+helm get all
+helm get all onepassword-connect
+helm list
+helm list -n external-secrets
+flux suspend hr
+flux suspend hr onepassword-connect
+flux suspend hr onepassword-connect -n external-secrets
+flux resume hr onepassword-connect -n external-secrets
+k9s
+kubectl get storageclass
+k9s
+kubectl get pv
+k9s
+kubectl get pv
+kubectl get pvc
+k9s
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+k9s
+kubectl get secret
+kubectl get secret -n kube-system
+kubectl get secret -n kube-system democratic-csi-freenas-nfs-secret
+kubectl get secret -n kube-system democratic-csi-freenas-nfs-secret -o yaml
+kubectl delete secret -n kube-system democratic-csi-freenas-nfs-secret
+kubectl delete secret -n kube-system 
+kubectl get secret -n kube-system 
+kubectl get secret -n kube-system democratic-csi-freenas-nfs-secret -o yaml
+k9s
+kubectl get secret -n kube-system democratic-csi-freenas-nfs-secret -o yaml
+k9s
+kubectl get secret -n kube-system 
+k9s
+kubectl get pv
+kubectl get pvc
+kubectl delete pcv emqx-data-emqx-0
+kubectl delete pvc emqx-data-emqx-0
+kubectl delete pvc emqx-data-emqx-1
+kubectl delete pvc emqx-data-emqx-2
+kubectl delete pvc redis-data-redis-node-0
+kubectl delete pvc redis-data-redis-node-1
+kubectl delete pvc redis-data-redis-node-2
+kubectl get pv
+kubectl delete pv pvc-37fe1849-4daf-4c13-a75d-039f3f4e51ce
+kubectl delete pv pvc-b20b12cb-4219-47a7-b395-2e211f3d7b0d
+kubectl delete pv pvc-d784b464-b508-44eb-8370-0592e1141e32
+kubectl delete pv pvc-eb1a5a4c-4b68-4b79-8867-cf633d004345
+kubectl get pv
+kubectl get pvc
+k9s
+kubectl get pv
+kubectl get pvc
+k9s
+kubectl get pvc
+k9s
+kubectl get pvc
+nano /etc/iscsi/iscsid.conf
+iscsiadm -m discovery -t sendtargets -p 192.168.178.241
+k9s
+task ansible:reboot
+k9s
+kubectl get pvc
+kubectl get pods
+kubectl get storageclass
+kubectl get snapshot
+kubectl get snapshotclass
+kubectl get 
+kubectl get  -h
+kubectl get  storage
+kubectl get  storageclass
+kubectl get crd volumesnapshotclasses.snapshot.storage.k8s.io
+k9s
+task cluster:kustomizations
+ps-snapscheduler                  4m45s   Unknown   R
+task cluster:helmreleases
+task cluster:helmrepositories
+task cluster:helmreleases
+k9s
+kubectl get storageclass
+kubectl get storageclass -n networking
+k9s
+cd /mnt/f/Repos/home-ops/
+code .
+git add -A
+git commit -m "Initial commit :rocket:"
+task ansible:prepare
+task ansible:install
+task cluster:verify
+task cluster:install
+task cluster:kustomizations
+task cluster:helmreleases
+task cluster:helmrepositories
+task cluster:helmreleases
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+kubectl get pv
+kubectl get pvc
+kubectl delete pvc minio-config
+kubectl delete pv minio-nfs
+kubectl get pv
+kubectl get pvc
+k9s
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+task cluster:kustomizations
+kubectl get pvc
+task cluster:helmreleases
+o                    29m     Unknown   R
+task cluster:helmrepositories
+task cluster:pods
+k9s
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+cd /mnt/f/Repos/home-ops/
+kuibectl get pods
+kubectl get pods
+code .
+kubectl get pods
+kubectl get pods --all-namespaces
+cd /mnt/f/Repos/home-ops/
+ls -la
+code .
+task
+task cluster: pods
+task cluster:pods
+cd /mnt/f/Repos/home-ops/
+ls -la
+k9s
+kubectl get volumesnapshot
+cd /mnt/f/Repos/home-ops/
+code .
+kubectl list
+kubectl get 
+kubectl get crds
+kubectl get volumesnapshotclasses
+kubectl get volumesnapshotclasses --all-namespaces
+kubectl get volumesnapshotclasse --all-namespaces
+kubectl get volumesnapshotclasses.snapshot.storage.k8s.io --all-namespaces
+kubectl get volumesnapshotclasse --all-namespaces
+kubectl get volumesnapshotclasses --all-namespaces
+git add -A
+git commit -m "Initial commit :rocket:"
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+task cluster:pods
+k9s
+kubectl get volumesnapshotclasses --all-namespaces
+nano /tmp/snap.yaml
+kubectl get pvc
+kubectl get pv
+nano /tmp/snap.yaml
+kubectl get pvc
+nano /tmp/snap.yaml
+kubectl apply -f /tmp/snap.yaml 
+kubectl get snapshot
+kubectl get snapshotvolume
+kubectl get volumesnapshot
+k9s
+kubectl get volumesnapshot
+kubectl get csi
+kubectl get driver
+kubectl get drivers
+kubectl get driver-csi
+kubectl get volumesnapshot
+kubectl get volumesnapshot --all-namespaces
+nano /tmp/snap.yaml
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+cd /mnt/f/Repos/home-ops/
+code .
+git add -A
+git commit -m "Initial commit :rocket:"
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+git add -A
+git commit -m "Initial commit :rocket:"
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+git add -A
+git commit -m "Initial commit :rocket:"
+flux reconcile source git home-kubernetes
+cd /mnt/f/Repos/home-ops/
+k9s
+kubectl get volumesnapshot
+kubectl get volumesnapshotclass
+kubectl get volumesnapshot
+k9s
+nano /tmp/snap.yaml 
+kubectl apply -f /tmp/snap.yaml 
+kubectl get volumesnapshot
+nano /tmp/snap.yaml 
+kubectl apply -f /tmp/snap.yaml 
+kubectl get volumesnapshot
+nano /tmp/snap.yaml 
+kubectl apply -f /tmp/snap.yaml 
+kubectl get volumesnapshot
+kubectl get pv
+kubectl get pvc
+nano /tmp/snap.yaml 
+kubectl apply -f /tmp/snap.yaml 
+nano /tmp/snap.yaml 
+kubectl apply -f /tmp/snap.yaml 
+kubectl get pvc
+kubectl get volumesnapshot
+kubectl apply -f /tmp/snap.yaml 
+kubectl get volumesnapshotclass
+k9sw
+k9s
+kubectl get volumesnapshotclass
+kubectl get pvc
+nano /tmp/snap.yaml 
+kubectl apply -f /tmp/snap.yaml 
+kubectl get volumesnapshot
+nano /tmp/snap.yaml 
+kubectl apply -f /tmp/snap.yaml 
+kubectl get volumesnapshot
+kubectl get secvret
+kubectl get secret
+kubectl get secret -n kube-system
+kubectl get secret -n kube-system snapshotter-secret-freenas-iscsi-csi-freenas-iscsi-democratic-c
+kubectl get secret -n kube-system snapshotter-secret-freenas-iscsi-csi-freenas-iscsi-democratic-csi
+kubectl get secret -n kube-system snapshotter-secret-freenas-iscsi-csi-freenas-iscsi-democratic-c
+kubectl get secret -n kube-system snapshotter-secret-freenas-iscsi-csi-freenas-iscsi-democratic-c -o yaml
+k9s
+task ansible:prepare
+task ansible:install
+task cluster:nodes
+k9s
+task cluster:install
+k9s
+kubectl get pvc
+k9s
+kubectl get pvc
+kubectl get volumesnapshot
+kubectl get volumesnapshot --all-namespaces
+kubectl get volumesnapshotclass --all-namespaces
+k9s
+task cluster:helmrepositories
+task cluster:helmreleases
+task cluster:
+task cluster:hr-restart
+k9s
+task ansible:prepare
+task ansible:reboot
+task ansible:ping
+task ansible:install
+task cluster:nodes
+task cluster:install
+cluster:reconcile
+task cluster:reconcile
+k9s
+kubectl get ingress
+kubectl get service
+kubectl get pvc
+kubectl get ingress
+kubectl get service
+kubectl get ingress
+k9s
+kubectl get pvc
+task ansible:reboot
+kubectl get pvc
+task cluster:pods
+k9s
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+k9s
+task cluster:hr
+task cluster:hr-restart
+k9s
+kubectl get secret
+kubectl get secret cloudnative-pg-secret
+kubectl get secret cloudnative-pg-secret -o yaml
+k9s
+task cluster:helmreleases
+kubectl get secret
+kubectl get secret emq
+kubectl get secret emqx-secret
+kubectl get secret emqx-secret -o yaml
+kubectl get ingress
+kubectal get statefulset
+kubectal get statefulse
+kubectl get staeful
+kubectl get stateful
+kubectl get statefulset
+kubectl get statefulset emqx
+kubectl describe statefulset emqx
+kubectl get storageclass
+kubectl get storageclass local-path
+kubectl describe storageclass local-path
+kubectl get pvc
+kubectl get pv
+kubectl get pvc
+kubectl describe statefulset emqx
+kubectl get pvc
+kubectl describe statefulset emqx
+kubectl get pvc
+kubectl describe statefulset emqx
+kubectl get pvc
+kubectl describe statefulset emqx
+k9s
+kubectl describe statefulset emqx
+kubectl deletew statefulset emqx
+kubectl delete statefulset emqx
+kubectl describe statefulset emqx
+k9s
+kubectl get pv
+kubectl get pvc
+k9s
+kubectl get pvc
+k9s
+kubectl get ingress
+k9s
+cd /mnt/f/Repos/homer
+cd /mnt/f/Repos/home-ops/
+task ansible:prepare
+task ansible:ping
+task ansible:install
+task cluster:nodes
+task cluster:pods
+task cluster:nodes
+task cluster:pods
+k9s
+task cluster:pods
+task cluster:verify
+task cluster:install
+task cluster:pods
+cluster:install
+task cluster:install
+task cluster:reconcile
+task cluster:resources
+k9s
+task cluster:gitrepositories
+task cluster:kustomizations
+Health check failed after 3m0.17181502
+task cluster:helmreleases
+task cluster:helmrepositories
+task cluster:kustomizations
+task cluster:helmreleases
+task cluster:pods
+task cluster:ingresses
+task cluster:kustomizations
+cluster-apps-metallb
+task cluster:helmreleases
+xternal-dns                  7m53s   Unknown   Reconciliation in progress
+networking         me
+xternal-dns                  7m53s   Unknown   Reconciliation in progress
+networking         me
+task cluster:helmrepositories
+task cluster:
+task cluster:hr-restart
+kubectl get hr --all-namespaces
+kubectl get hr --all-namespaces | grep False
+task ansible:prepare
+task ansible:reboot
+task ansible:ping
+task ansible:install
+task cluster:nodes
+task cluster:pods
+task cluster:install
+cluster:reconcile
+task cluster:reconcile
+task cluster:nodes
+task cluster:pods
+task cluster:reconcile
+task cluster:pods
+k9s
+kubectl get ingress
+k9s
+task cluster:
+task cluster:gitr
+task cluster:helmreleases
+task cluster:kustomizations
+k9s
+task ansible:reboot
+k9s
+kubectl get secret
+kubectl delete secret authelia-secret
+kubectl get secret
+kubectl get secret authelia-secret -o yaml
+k9s
+kubectl delete secret authelia-secret
+kubectl get secret authelia-secret -o yaml
+k9s
+kubectl get configmap
+kubectl get configmap authelia-configmap
+kubectl get configmap authelia-configmap -o yaml
+k9s
+kubectl deelte secret authelia-secret
+kubectl delete secret authelia-secret
+k9s
+kubectl get configmap authelia-configmap -o yaml
+kubectl delete configmap authelia-configmap 
+kubectl get configmap authelia-configmap -o yaml
+k9s
+kubectl delete secret authelia-secret
+kubectl delete secret glauth-secret
+k9s
+kubectl delete secret glauth-secret
+kubectl delete secret authelia-secret
+k9s
+kubectl get ingress
+kubectl delete ingress authelia
+kubectl get ingress
+k9s
+kubectl get ingress
+task cluster:
+task cluster:helmreleases
+k9s
+hl li
+helm
+helm list
+k9s
+kubectl get ingress
+k9s
+kubectl get ingress
+helm list
+kubectl get secret
+helm list
+kubectl delete secret sh.helm.release.v1.authelia.v1
+kubectl get secret
+helm list
+kubectl get ingress
+k9s
+kubectl delete secret glauth-secret
+kubectl get secret glauth-secret -o yaml
+k9s
+kubectl delete secret authelia-secret
+kubectl delete secret glauth-secret
+kubectl get secret
+k9s
+kubectl delete secret glauth-secret
+kubectl delete secret authilia-secret
+kubectl delete secret authelia-secret
+k9s
+kubectl get configmap
+kubectl get configmap smtp-relay-configmap
+kubectl get configmap smtp-relay-configmap -o yaml
+kubectl get secret
+kubectl get secret smtp-relay-secret
+kubectl get secret smtp-relay-secret -o yaml
+k9s
+date
+ssh mathijs@192.168.178.161
+date
+k9s
+kubectl delete secret authelia-secret
+k9s
+kubectl get volumesnapshot
+kubectl get secret home-assistant-restic-secret -o yaml
+kubectl delete secret home-assistant-restic-secret
+kubectl get secret home-assistant-restic-secret -o yaml
+kubectl get ReplicationSource
+kubectl get ReplicationSource home-assistant
+kubectl get ReplicationSource home-assistant -o yaml
+kubectl get secret home-assistant-restic-secret -o yaml
+kubectl get ReplicationSource home-assistant -o yaml
+kubectl delete ReplicationSource home-assistant -o yaml
+kubectl delete ReplicationSource home-assistant
+kubectl delete ReplicationSource home-assistant -o yaml
+kubectl get ReplicationSource home-assistant -o yaml
+kubectl get secret home-assistant-restic-secret -o yaml
+k9s
+kubectl get secret home-assistant-restic-secret -o yaml
+kubectl get ReplicationSource home-assistant -o yaml
+kubectl get secret home-assistant-restic-secret -o yaml
+kubectl get ReplicationSource home-assistant -o yaml
+kubectl get secret home-assistant-restic-secret -o yaml
+kubectl get ReplicationSource home-assistant -o yaml
+k9s
+kubectl get ReplicationSource home-assistant -o yaml
+9s
+k9s
+kubectl get ReplicationSource home-assistant -o yaml
+kubectl delete ReplicationSource home-assistant
+kubectl get ReplicationSource home-assistant -o yaml
+kubectl get volumesnapshot
+kubectl get volumesnapshotclass
+kubectl get volumesnapshotcontent
+kubectl get volume
+kubectl get storageclass
+kubectl delete secret authelia-secret
+kubectl get secret authelia-secret
+k9s
+task cluster:helmrepositories
+k9s
+kubectl get secret grafana-secretr
+kubectl get secret grafana-secret
+kubectl get secret
+k9s
+kubectl get deployment
+kubectl get deployment -n flux-system
+kubectl edit  deployment -n flux-system weave-gitops
+kubectl get replicaset -n flux-system
+kubectl edit replicaset -n flux-system weave-gitops-755bd7b584
+kubectl get helm
+kubectl get helmrepo
+kubectl get helmrepository
+kubectl get helmrelease
+kubectl get helmrelease -n flux-system
+kubectl edit  helmrelease -n flux-system weave-gitops
+k9s
+kubectl get secret -n monitoring
+kubectl get secret -n monitoring grafana
+kubectl get secret -n monitoring grafana -o yaml
+kubectl get secret 
+k9s
+kubectl get secretyor
+kubectl get secret
+k9s
+kubectl get secret
+kubectl get secret -n monitoring
+kubectl get secret
+k9s
+kubectl get secret
+kubectl get secret -n monitor
+kubectl get secret --all-namespaces
+k9s
+task ansible:prepare
+task ansible:install
+task cluster:nodes
+task cluster:verify
+task cluster:install
+cluster:reconcile
+k9s
+task cluster:reconcile
+k9s
+task ansible:prepare
+task ansible:reboot
+task ansible:ping
+task ansible:install
+task cluster:nodes
+task cluster:verify
+task cluster:install
+k9s
+cd /tmp/
+sudo openssl genrsa -aes128 -out private.key 2048
+ls -la
+cat private.key 
+sudo su
+autheliaauthelia
+authelia
+cd /mnt/f/Repos/home-ops/
+ls -la
+cp kubeconfig kubeconfig.old
+nano kubeconfig
+k9s
+kubectl get pods
+nano kubeconfig
+kubectl -n kube-system secret
+kubectl -n kube-system edit 
+kubectl -n kube-system edit secrets/k3s-serving
+nano kubeconfig
+kubectl get pods
+nano kubeconfig
+kubectl get pods
+task ansible:reboot
+kubectl get pods
+nano kubeconfig
+kubectl get pods
+docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+ls -la
+docker volume
+docker volume lsa
+docker volume ls
+docker volume inspect uptime-kuma
+cd /var/lib/docker/volumes/uptime-kuma/_data
+docker run -v /dbdata --name uptime-kuma ubuntu /bin/bash
+docker run -v /uptime-kuma --name uptime-kuma ubuntu /bin/bash
+uptime-kuma
+docker run -v /uptime-kuma --name uptime-kuma ubuntu /bin/bash
+mkdir uptime-kuma
+docker run -d --restart=always -p 3001:3001 -v ./uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+docker run -d --restart=always -p 3001:3001 -v /uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+ls -la uptime-kuma/
+ls -la /
+ls -la /u
+ls -la /uptime-kuma/
+docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+ls -la uptime-kuma/
+docker run -d --restart=always -p 3001:3001 -v /uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1
+cd /uptime-kuma/
+ls -la
+ls -la upload/
+cd Windows/
+openssl pkcs7 -print_certs -in edgeve_aartsen_com.p7b -out cert.cer
+openssl pkcs12 -export -in cert.cer -inkey ../../edgeve.key -out cert.pfx
+cd /mnt/f/Repos/home-ops/
+code .
+cd /mnt/f/Repos/home-ops/
+code .
+ls -la
+task ansible
+task ansible:prepare
+task cluster:
+task ansible:install

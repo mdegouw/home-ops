@@ -5,6 +5,7 @@ vars:
   PROJECT_DIR:
     sh: "git rev-parse --show-toplevel"
   KUBERNETES_DIR: "{{.PROJECT_DIR}}/kubernetes"
+  CLUSTER_DIR: "{{.PROJECT_DIR}}/kubernetes"
   ANSIBLE_DIR: "{{.PROJECT_DIR}}/ansible"
   TERRAFORM_DIR: "{{.PROJECT_DIR}}/terraform"
 
@@ -19,8 +20,14 @@ includes:
   precommit: .taskfiles/PrecommitTasks.yml
   terraform: .taskfiles/TerraformTasks.yml
   sops: .taskfiles/SopsTasks.yml
+  es: .taskfiles/ExternalSecrets/Tasks.yml
+  vs: .taskfiles/VolSync/Tasks.yml
 
 tasks:
+
+  default:
+    silent: true
+    cmds: ["task -l"]
 
   init:
     desc: Initialize workstation dependencies with Brew

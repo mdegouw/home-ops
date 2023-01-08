@@ -71,9 +71,10 @@
         - kind: Deployment
           name: tigera-operator
           namespace: tigera-operator
-        - kind: DaemonSet
-          name: kube-vip
-          namespace: kube-system
+        - kind: BGPConfiguration
+          name: default
+        - kind: BGPPeer
+          name: global
         - kind: Installation
           name: default
         - kind: CustomResourceDefinition
