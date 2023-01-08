@@ -1,0 +1,20 @@
+---
+apiVersion: volsync.backube/v1alpha1
+kind: ReplicationSource
+metadata:
+  name: changedetection
+  namespace: default
+spec:
+  sourcePVC: config-changedetection-0
+  trigger:
+    schedule: "0 0 * * *"
+  restic:
+    copyMethod: Snapshot
+    pruneIntervalDays: 10
+    repository: changedetection-restic-secret
+    cacheCapacity: 2Gi
+    volumeSnapshotClassName: freenas-iscsi-csi
+    storageClassName: freenas-iscsi-csi
+    retain:
+      daily: 10
+      within: 3d
