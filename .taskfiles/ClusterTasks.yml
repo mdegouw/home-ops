@@ -77,6 +77,50 @@ tasks:
     cmds:
       - kubectl get ingress {{.CLI_ARGS | default "-A"}}
 
+  mount:
+    desc: Mount a PersistantVolumeClaim to a pod temporarily
+    interactive: true
+    vars:
+      claim: '{{ or .claim (fail "PersistentVolumeClaim `claim` is required") }}'
+      namespace: '{{.namespace | default "default"}}'
+    cmds:
+      - |
+        kubectl run -n {{.namespace}} debug-{{.claim}} -i --tty --rm --image=null --privileged --overrides='
+          {
+            "apiVersion": "v1",
+            "spec": {
+              "containers": [
+                {
+                  "name": "debug",
+                  "image": "ghcr.io/onedr0p/alpine:rolling",
+                  "command": [
+                    "/bin/bash"
+                  ],
+                  "stdin": true,
+                  "stdinOnce": true,
+                  "tty": true,
+                  "volumeMounts": [
+                    {
+                      "name": "config",
+                      "mountPath": "/data/config"
+                    }
+                  ]
+                }
+              ],
+              "volumes": [
+                {
+                  "name": "config",
+                  "persistentVolumeClaim": {
+                    "claimName": "{{.claim}}"
+                  }
+                }
+              ],
+              "restartPolicy": "Never"
+            }
+          }'
+    preconditions:
+      - kubectl -n {{.namespace}} get pvc {{.claim}}
+
   resources:
     desc: Gather common resources in your cluster, useful when asking for support
     cmds:
@@ -88,3 +132,4 @@ tasks:
       - task: certificates
       - task: ingresses
       - task: pods
+      - task: mount
