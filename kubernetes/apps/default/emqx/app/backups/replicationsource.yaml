@@ -14,7 +14,7 @@ spec:
     pruneIntervalDays: 10
     repository: emqx-restic-secret
     cacheCapacity: 2Gi
-    volumeSnapshotClassName: freenas-iscsi-csi
+    volumeSnapshotClassName: freenas-nfs-csi
     storageClassName: freenas-nfs-csi
     retain:
       daily: 10
