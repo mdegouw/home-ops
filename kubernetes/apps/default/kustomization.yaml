@@ -13,9 +13,8 @@ resources:
   - ./home-assistant/ks.yaml
   - ./changedetection/ks.yaml
   - ./n8n/ks.yaml
-  - ./shlink/ks.yaml
+  # - ./shlink/ks.yaml
   - ./semaphore/ks.yaml
-  - ./excalidraw/ks.yaml
   - ./qbittorrent/ks.yaml
   - ./theme-park/ks.yaml
   # - ./glauth/ks.yaml
