@@ -7,7 +7,7 @@ spec:
   capacity:
     storage: 20Gi
   accessModes: ["ReadWriteMany"]
-  storageClassName: minio-nfs
+  storageClassName: qbittorrent-downloads-nfs
   persistentVolumeReclaimPolicy: Retain
   nfs:
     server: 192.168.178.241
