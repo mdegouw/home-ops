@@ -91,15 +91,13 @@ spec:
     persistence:
       downloads:
         enabled: true
-        type: nfs
-        server: 192.168.178.241
-        path: /mnt/p/Downloads
+        type: pvc
+        existingClaim: qbittorrent-downloads-nfs
         mountPath: /downloads
       media:
         enabled: true
-        type: nfs
-        server: 192.168.178.241
-        path: /mnt/p/Media
+        type: pvc
+        existingClaim: qbittorrent-media-nfs
         mountPath: /media
       incomplete:
         enabled: true
