@@ -56,13 +56,13 @@ spec:
         instance_id:
         httpConnection:
           protocol: http
-          host: 192.168.178.241
+          host: 192.168.178.121
           port: 80
           allowInsecure: true
           apiVersion: 2
-        sshConnection:
-          host: 192.168.178.241
-          port: 22
+        # sshConnection:
+        #   host: 192.168.178.241
+        #   port: 22
         zfs:
           # the example below is useful for TrueNAS 12
           cli:
@@ -75,8 +75,8 @@ spec:
           # https://www.ixsystems.com/documentation/freenas/11.2-U5/storage.html#zfs-zvol-config-opts-tab
           # standard volume naming overhead is 46 chars
           # datasetParentName should therefore be 17 chars or less
-          datasetParentName: p/k8s/iscsi/vol
-          detachedSnapshotsDatasetParentName: p/k8s/iscsi/snap
+          datasetParentName: p/k3s/iscsi/vol
+          detachedSnapshotsDatasetParentName: p/k3s/iscsi/snap
           # "" (inherit), lz4, gzip-9, etc
           zvolCompression:
           # "" (inherit), on, off, verify
@@ -85,7 +85,7 @@ spec:
           # 512, 1K, 2K, 4K, 8K, 16K, 64K, 128K default is 16K
           zvolBlocksize:
         iscsi:
-          targetPortal: "192.168.178.241:3260"
+          targetPortal: "192.168.178.121:3260"
           targetPortals: []
           # leave empty to omit usage of -I with iscsiadm
           interface:
@@ -116,15 +116,15 @@ spec:
       kind: Secret
       name: democratic-csi-freenas-iscsi-secret
       valuesKey: api_key
-    - targetPath: driver.config.httpConnection.username
-      kind: Secret
-      name: democratic-csi-freenas-iscsi-secret
-      valuesKey: api_user
-    - targetPath: driver.config.sshConnection.username
-      kind: Secret
-      name: democratic-csi-freenas-iscsi-secret
-      valuesKey: ssh_user
-    - targetPath: driver.config.sshConnection.password
-      kind: Secret
-      name: democratic-csi-freenas-iscsi-secret
-      valuesKey: ssh_password
+    # - targetPath: driver.config.httpConnection.username
+    #   kind: Secret
+    #   name: democratic-csi-freenas-iscsi-secret
+    #   valuesKey: api_user
+    # - targetPath: driver.config.sshConnection.username
+    #   kind: Secret
+    #   name: democratic-csi-freenas-iscsi-secret
+    #   valuesKey: ssh_user
+    # - targetPath: driver.config.sshConnection.password
+    #   kind: Secret
+    #   name: democratic-csi-freenas-iscsi-secret
+    #   valuesKey: ssh_password
