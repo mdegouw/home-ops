@@ -32,7 +32,6 @@ spec:
   dependsOn:
     - name: cluster-apps-cloudnative-pg-app
     - name: cluster-apps-kyverno
-    - name: cluster-apps-minio-app
     - name: cluster-apps-onepassword-connect
     - name: cluster-apps-democratic-csi-freenas-iscsi
   path: ./kubernetes/apps/default/cloudnative-pg/cluster
