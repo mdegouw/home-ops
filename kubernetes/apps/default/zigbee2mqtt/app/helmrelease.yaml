@@ -77,7 +77,7 @@ spec:
               - *host
     podSecurityContext:
       runAsUser: 0
-      runAsGroup: 0
+      runAsGroup: 20
       fsGroup: 0
       fsGroupChangePolicy: "Always"
       allowPrivilegeEscalation: true
