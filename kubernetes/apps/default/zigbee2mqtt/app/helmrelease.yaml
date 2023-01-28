@@ -81,6 +81,7 @@ spec:
       fsGroup: 0
       fsGroupChangePolicy: "Always"
       allowPrivilegeEscalation: true
+      privileged: true
     volumeClaimTemplates:
       - name: config
         mountPath: /data
