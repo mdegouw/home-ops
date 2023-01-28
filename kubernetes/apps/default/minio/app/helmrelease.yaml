@@ -9,6 +9,7 @@ spec:
   chart:
     spec:
       chart: minio
+      version: 5.0.4
       sourceRef:
         kind: HelmRepository
         name: minio
@@ -61,6 +62,14 @@ spec:
         cpu: 100m
       limits:
         memory: 750Mi
+
+    buckets:
+      - name: postgresql
+        purge: false
+
+    users:
+      - accessKey: 004ccdc3389a5800000000004
+        secretKey: K004yDRiHqskOrJm+YmstaScigtRCxU
 
   valuesFrom:
     - targetPath: rootUser
