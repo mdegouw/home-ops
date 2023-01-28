@@ -31,7 +31,7 @@ spec:
         compression: bzip2
         maxParallel: 8
       destinationPath: s3://mdegouw-cluster-backup/postgresql/
-      endpointURL: s3.us-west-004.backblazeb2.com
+      endpointURL: https://s3.us-west-004.backblazeb2.com
       serverName: mdegouw-cluster-backup
       s3Credentials:
         region:
