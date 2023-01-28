@@ -10,7 +10,7 @@ spec:
     additionalContainers:
       exporter:
         name: exporter
-        image: docker.io/kpetrem/mqtt-exporter:latest@sha256:a2c43b0ff2f2cb7f5e2d1ec9b19891c01197a55025a73f90d4249b926b34c773
+        image: docker.io/kpetrem/mqtt-exporter:latest@sha256:0d00a29987f78eeb16ff1549a68cf3b96111666c074fa3093f6d84ba392ed6d8
         env:
           - name: LOG_LEVEL
             value: DEBUG
