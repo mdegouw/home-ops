@@ -10,4 +10,4 @@ resources:
   # - ./backups #TODO: fix backup
 patchesStrategicMerge:
   - ./patches/env.yaml
-  - ./patches/exporter.yaml
+  # - ./patches/exporter.yaml
