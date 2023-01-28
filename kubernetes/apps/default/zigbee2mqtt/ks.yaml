@@ -11,7 +11,6 @@ spec:
     - name: cluster-apps-emqx-app
     - name: cluster-apps-onepassword-connect
     - name: cluster-apps-democratic-csi-freenas-iscsi
-    - name: cluster-apps-volsync-app
   path: ./kubernetes/apps/default/zigbee2mqtt/app
   prune: true
   sourceRef:
