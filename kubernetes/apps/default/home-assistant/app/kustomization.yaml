@@ -6,6 +6,6 @@ namespace: default
 resources:
   - ./externalsecret.yaml
   - ./helmrelease.yaml
-  - ./backups
+  # - ./backups #TODO: Fix backup
 patchesStrategicMerge:
   - ./patches/addons.yaml
