@@ -27,6 +27,8 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    nodeSelector:
+      feature.node.kubernetes.io/custom-zigbee: true
     controller:
       type: statefulset
       annotations:
