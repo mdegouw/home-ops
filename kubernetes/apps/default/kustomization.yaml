@@ -9,7 +9,7 @@ resources:
   # # - ./zigbee2mqtt/ks.yaml
   - ./redis/ks.yaml
   # - ./minio/ks.yaml #TODO: Fix image - ARM64
-  - ./cloudnative-pg/ks.yaml
+  # - ./cloudnative-pg/ks.yaml
   - ./home-assistant/ks.yaml
   # - ./changedetection/ks.yaml
   # - ./n8n/ks.yaml
