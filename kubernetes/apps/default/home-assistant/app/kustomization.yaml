@@ -7,5 +7,3 @@ resources:
   - ./externalsecret.yaml
   - ./helmrelease.yaml
   # - ./backups #TODO: Fix backup
-patchesStrategicMerge:
-  - ./patches/addons.yaml
