@@ -27,12 +27,10 @@ spec:
   uninstall:
     keepHistory: false
   values:
-    nodeSelector:
-      feature.node.kubernetes.io/custom-zigbee: true
-    # controller:
-    #   type: statefulset
-    #   annotations:
-    #     reloader.stakater.com/auto: "true"
+    controller:
+      type: statefulset
+      annotations:
+        reloader.stakater.com/auto: "true"
     image:
       repository: ghcr.io/koenkk/zigbee2mqtt
       tag: 1.29.2
