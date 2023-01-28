@@ -30,6 +30,7 @@ spec:
         configmap.reloader.stakater.com/reload: node-feature-discovery-worker-conf
       nodeSelector:
         node-role.kubernetes.io/worker: "true"
+        node-role.kubernetes.io/master: "true"
       config:
         core:
           sources:
@@ -38,18 +39,16 @@ spec:
             - usb
         sources:
           usb:
-            deviceClassWhitelist:
-              - "02"
-              - "03"
-              - "0e"
-              - "ef"
-              - "fe"
-              - "ff"
             deviceLabelFields:
               - class
               - vendor
               - device
           custom:
+            - name: zigbee
+              matchOn:
+                - usbId:
+                    vendor: ["10c4"]
+                    device: ["ea60"]
             - name: zwave
               matchOn:
                 - usbId:
