@@ -10,8 +10,8 @@ spec:
   storageClassName: minio-nfs
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: 192.168.178.241
-    path: /mnt/p/k8s/minio
+    server: 10.100.1.240
+    path: /mnt/p/k3s/minio
   mountOptions: ["nfsvers=4", "nconnect=8", "hard", "noatime"]
 ---
 apiVersion: v1

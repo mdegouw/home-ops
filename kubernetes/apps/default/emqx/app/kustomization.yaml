@@ -7,4 +7,4 @@ resources:
   - ./externalsecret.yaml
   - ./pv.yaml
   - ./helmrelease.yaml
-  - ./backups
+  # - ./backups TODO: Fix Backup Solution
