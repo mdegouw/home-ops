@@ -79,7 +79,8 @@ spec:
       runAsUser: 0
       runAsGroup: 0
       fsGroup: 0
-      fsGroupChangePolicy: "OnRootMismatch"
+      fsGroupChangePolicy: "Always"
+      allowPrivilegeEscalation: true
     volumeClaimTemplates:
       - name: config
         mountPath: /data
