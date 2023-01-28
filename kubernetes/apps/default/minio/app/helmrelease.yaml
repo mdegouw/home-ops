@@ -11,7 +11,7 @@ spec:
       chart: minio
       sourceRef:
         kind: HelmRepository
-        name: bitnami
+        name: minio
         namespace: flux-system
   install:
     createNamespace: true
@@ -24,23 +24,10 @@ spec:
     persistence:
       enabled: true
       existingClaim: minio-nfs
-      mountPath: /data
+
+    replicas: 3
 
     ingress:
-      enabled: true
-      ingressClassName: nginx
-      annotations:
-        external-dns.home.arpa/enabled: "true"
-        hajimari.io/icon: mdi:pail
-      hostname: &console-host "minio.${SECRET_DOMAIN}"
-      path: /
-      pathType: Prefix
-      tls: true
-      extraTls:
-        - hosts:
-            - *console-host
-
-    apiIngress:
       enabled: true
       ingressClassName: nginx
       annotations:
@@ -54,18 +41,33 @@ spec:
         - hosts:
             - *api-host
 
+    consoleIngress:
+      enabled: true
+      ingressClassName: nginx
+      annotations:
+        external-dns.home.arpa/enabled: "true"
+        hajimari.io/icon: mdi:pail
+      hostname: &console-host "minio.${SECRET_DOMAIN}"
+      path: /
+      pathType: Prefix
+      tls: true
+      extraTls:
+        - hosts:
+            - *console-host
+
     resources:
       requests:
         memory: 100Mi
         cpu: 100m
       limits:
         memory: 750Mi
+
   valuesFrom:
-    - targetPath: auth.rootUser
+    - targetPath: rootUser
       kind: Secret
       name: minio-secret
       valuesKey: MINIO_ROOT_USER
-    - targetPath: auth.rootPassword
+    - targetPath: rootPassword
       kind: Secret
       name: minio-secret
       valuesKey: MINIO_ROOT_PASSWORD
