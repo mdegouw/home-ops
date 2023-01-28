@@ -34,7 +34,9 @@ spec:
       endpointURL: s3.us-west-004.backblazeb2.com
       serverName: mdegouw-cluster-backup
       s3Credentials:
-        region: us-west-004
+        region:
+          name: postgres-backblaze
+          key: BACKBLAZE_REGION
         accessKeyId:
           name: postgres-backblaze
           key: BACKBLAZE_ACCESS_KEY
