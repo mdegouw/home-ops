@@ -30,10 +30,11 @@ spec:
       wal:
         compression: bzip2
         maxParallel: 8
-      destinationPath: s3://mdegouw-cluster-backup/postgresql/
+      destinationPath: s3://postgresql/
       endpointURL: s3.us-west-004.backblazeb2.com
-      serverName: postgres-v1
+      serverName: mdegouw-cluster-backup
       s3Credentials:
+        region: us-west-004
         accessKeyId:
           name: postgres-backblaze
           key: BACKBLAZE_ACCESS_KEY
