@@ -27,6 +27,13 @@ spec:
   uninstall:
     keepHistory: false
   values:
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+            - matchExpressions:
+                - key: feature.node.kubernetes.io/custom-zigbee
+                  operator: Exists
     controller:
       type: statefulset
       annotations:
