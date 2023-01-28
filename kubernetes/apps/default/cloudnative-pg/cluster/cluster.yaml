@@ -32,7 +32,7 @@ spec:
         maxParallel: 8
       destinationPath: s3://mdegouw-cluster-backup/postgresql/
       endpointURL: https://s3.us-west-004.backblazeb2.com
-      serverName: mdegouw-cluster-backup
+      serverName: postgres-v1
       s3Credentials:
         region:
           name: postgres-backblaze
