@@ -56,7 +56,7 @@ spec:
         instance_id:
         httpConnection:
           protocol: http
-          host: 192.168.178.121
+          host: 10.100.1.240
           port: 80
           allowInsecure: true
           apiVersion: 2
@@ -85,7 +85,7 @@ spec:
           # 512, 1K, 2K, 4K, 8K, 16K, 64K, 128K default is 16K
           zvolBlocksize:
         iscsi:
-          targetPortal: "192.168.178.121:3260"
+          targetPortal: "10.100.1.240:3260"
           targetPortals: []
           # leave empty to omit usage of -I with iscsiadm
           interface:

@@ -5,18 +5,18 @@ resources:
   - ./namespace.yaml
   - ./echo-server/ks.yaml
   - ./hajimari/ks.yaml
-  - ./emqx/ks.yaml
-  # - ./zigbee2mqtt/ks.yaml
-  - ./redis/ks.yaml
-  - ./minio/ks.yaml
-  - ./cloudnative-pg/ks.yaml
-  - ./home-assistant/ks.yaml
-  - ./changedetection/ks.yaml
-  - ./n8n/ks.yaml
-  - ./shlink/ks.yaml
-  - ./semaphore/ks.yaml
-  - ./qbittorrent/ks.yaml
-  - ./theme-park/ks.yaml
-  # - ./glauth/ks.yaml
-  # - ./smtp-relay/ks.yaml
-  # - ./authelia/ks.yaml
+  # - ./emqx/ks.yaml
+  # # - ./zigbee2mqtt/ks.yaml
+  # - ./redis/ks.yaml
+  # - ./minio/ks.yaml
+  # - ./cloudnative-pg/ks.yaml
+  # - ./home-assistant/ks.yaml
+  # - ./changedetection/ks.yaml
+  # - ./n8n/ks.yaml
+  # - ./shlink/ks.yaml
+  # - ./semaphore/ks.yaml
+  # - ./qbittorrent/ks.yaml
+  # - ./theme-park/ks.yaml
+  # # - ./glauth/ks.yaml
+  # # - ./smtp-relay/ks.yaml
+  # # - ./authelia/ks.yaml

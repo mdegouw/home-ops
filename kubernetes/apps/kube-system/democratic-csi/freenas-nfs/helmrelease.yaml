@@ -58,7 +58,7 @@ spec:
         instance_id:
         httpConnection:
           protocol: http
-          host: 192.168.178.121
+          host: 10.100.1.240
           port: 80
           allowInsecure: true
           apiVersion: 2
@@ -75,7 +75,7 @@ spec:
           datasetPermissionsUser: 0
           datasetPermissionsGroup: 0
         nfs:
-          shareHost: 192.168.178.121
+          shareHost: 10.100.1.240
           shareAlldirs: false
           shareAllowedHosts: []
           shareAllowedNetworks: []

@@ -6,7 +6,7 @@
 
 # (string) Use a specific version of k3s
 # renovate: datasource=github-releases depName=k3s-io/k3s
-k3s_release_version: "v1.24.8+k3s1"
+k3s_release_version: "v1.26.1+k3s1"
 
 # (bool) Install using hard links rather than symbolic links.
 k3s_install_hard_links: true
@@ -24,7 +24,7 @@ k3s_etcd_datastore: true
 k3s_use_unsupported_config: true
 
 # (string) Control Plane registration address
-k3s_registration_address: "192.168.178.254"
+k3s_registration_address: "10.100.1.254"
 
 # (list) A list of URLs to deploy on the primary control plane. Read notes below.
 k3s_server_manifests_urls:
@@ -60,4 +60,3 @@ k3s_server_manifests_templates:
   - calico-bgpconfiguration.yaml.j2
   - calico-bgppeer.yaml.j2
   - audit-policy.yaml.j2
-  # - kube-vip-daemonset.yaml.j2
