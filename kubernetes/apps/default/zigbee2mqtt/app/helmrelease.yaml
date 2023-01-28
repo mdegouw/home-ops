@@ -88,6 +88,11 @@ spec:
         storageClass: freenas-iscsi-csi
         labels:
           snapshot.home.arpa/enabled: "true"
+    persistence:
+      stick:
+        enabled: true
+        type: hostPath
+        hostPath: /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_4817705dbc19ec11b05777e5f01c6278-if00-port0
     resources:
       requests:
         cpu: 10m
