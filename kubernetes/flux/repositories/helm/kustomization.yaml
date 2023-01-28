@@ -32,3 +32,4 @@ resources:
   - ./stakater.yaml
   - ./tf-controller.yaml
   - ./weave-gitops.yaml
+  - ./groundhog2k.yaml
