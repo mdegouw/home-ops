@@ -52,3 +52,4 @@ spec:
     kubectl:
       image:
         repository: docker.io/rancher/kubectl
+        digest: sha256:2073fca15a5fc7175b42f34e8c1cb0e7ac6fdde36ef0b6836ba0b7b00e524481
