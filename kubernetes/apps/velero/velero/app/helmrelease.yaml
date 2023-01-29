@@ -22,6 +22,9 @@ spec:
     remediation:
       retries: 3
   values:
+
+    upgradeCRDs: false
+
     image:
       repository: velero/velero
       digest: sha256:322dc1956d9b754b5baa626b819fd6f06096bcd70c218621c8de8b1ee828bf66
