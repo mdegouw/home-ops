@@ -1,0 +1,18 @@
+---
+apiVersion: velero.io/v1
+kind: Schedule
+metadata:
+  creationTimestamp: null
+  name: default
+  namespace: velero
+spec:
+  schedule: '@every 24h'
+  template:
+    csiSnapshotTimeout: 0s
+    defaultVolumesToFsBackup: true
+    hooks: {}
+    includedNamespaces:
+      - default
+    metadata: {}
+    ttl: 0s
+  useOwnerReferencesInBackup: false
