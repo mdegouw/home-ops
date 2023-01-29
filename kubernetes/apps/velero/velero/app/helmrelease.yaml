@@ -22,6 +22,13 @@ spec:
     remediation:
       retries: 3
   values:
+    image:
+      repository: velero/velero
+      digest: sha256:322dc1956d9b754b5baa626b819fd6f06096bcd70c218621c8de8b1ee828bf66
+    kubectl:
+      image:
+        repository: ghcr.io/onedr0p/kubernetes-kubectl
+        digest: sha256:6ee3353da3495bc99d73af29a4495bb95570e31e71579cfce719c4123882723d
     initContainers:
       - name: velero-plugin-for-aws
         image: velero/velero-plugin-for-aws:v1.4.0
@@ -48,8 +55,3 @@ spec:
           region: us-west-004
           s3ForcePathStyle: true
           s3Url: https://s3.us-west-004.backblazeb2.com
-
-    kubectl:
-      image:
-        repository: ghcr.io/onedr0p/kubernetes-kubectl
-        digest: sha256:6ee3353da3495bc99d73af29a4495bb95570e31e71579cfce719c4123882723d
