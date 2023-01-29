@@ -1,0 +1,17 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: velero
+resources:
+  - ./backuprepositories.yaml
+  - ./backupstoragelocations.yaml
+  - ./backups.yaml
+  - ./deletebackuprequests.yaml
+  - ./downloadrequests.yaml
+  - ./podvolumebackups.yaml
+  - ./podvolumerestores.yaml
+  - ./restores.yaml
+  - ./schedules.yaml
+  - ./serverstatusrequests.yaml
+  - ./volumesnapshotlocations.yaml

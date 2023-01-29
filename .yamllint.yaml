@@ -1,6 +1,7 @@
 ---
 ignore: |
   *.sops.*
+  kubernetes/apps/velero/velero/app/crds/*.yaml
 extends: default
 rules:
   truthy:
