@@ -34,3 +34,4 @@ resources:
   - ./weave-gitops.yaml
   - ./groundhog2k.yaml
   - ./minio.yaml
+  - ./vmware-tanzu.yaml
