@@ -49,7 +49,4 @@ spec:
           s3ForcePathStyle: true
           s3Url: https://s3.us-west-004.backblazeb2.com
 
-    kubectl:
-      image:
-        repository: docker.io/rancher/kubectl
-        digest: sha256:2073fca15a5fc7175b42f34e8c1cb0e7ac6fdde36ef0b6836ba0b7b00e524481
+    upgradeCRDs: false
