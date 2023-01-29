@@ -49,4 +49,7 @@ spec:
           s3ForcePathStyle: true
           s3Url: https://s3.us-west-004.backblazeb2.com
 
-    upgradeCRDs: false
+    kubectl:
+      image:
+        repository: ghcr.io/onedr0p/kubernetes-kubectl
+        digest: sha256:6ee3353da3495bc99d73af29a4495bb95570e31e71579cfce719c4123882723d
