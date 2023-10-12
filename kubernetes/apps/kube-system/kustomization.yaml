@@ -8,6 +8,6 @@ resources:
   # - ./snapshot-controller/ks.yaml
   - ./local-path-provisioner/ks.yaml
   # - ./democratic-csi/ks.yaml
-  # - ./external-secrets/ks.yaml
+  - ./external-secrets/ks.yaml
   - ./metrics-server/ks.yaml
   - ./reloader/ks.yaml
