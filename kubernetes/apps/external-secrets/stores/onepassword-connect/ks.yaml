@@ -8,7 +8,7 @@ spec:
   dependsOn:
     - name: cluster-apps-external-secrets
     - name: cluster-apps-nginx-external
-  path: ./kubernetes/apps/kube-system/external-secrets/stores/onepassword-connect/app
+  path: ./kubernetes/apps/external-secrets/stores/onepassword-connect/app
   prune: true
   sourceRef:
     kind: GitRepository
@@ -18,7 +18,7 @@ spec:
     - apiVersion: helm.toolkit.fluxcd.io/v2beta1
       kind: HelmRelease
       name: onepassword-connect
-      namespace: kube-system
+      namespace: external-secrets
   interval: 30m
   retryInterval: 1m
   timeout: 3m
