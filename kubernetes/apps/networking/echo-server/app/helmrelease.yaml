@@ -34,6 +34,7 @@ spec:
       main:
         annotations:
           io.cilium/lb-ipam-ips: "10.69.10.44"
+        type: LoadBalancer
         ports:
           http:
             port: &port 8080
