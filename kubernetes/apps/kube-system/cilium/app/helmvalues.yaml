@@ -11,6 +11,11 @@ data:
       masquerade: true
     bgp:
       enabled: true
+      announce:
+        loadBalancerIP: true
+        podCIDR: true
+    bgpControlPlane:
+      enabled: true
     cluster:
       name: home-cluster
       id: 1
