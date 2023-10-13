@@ -57,3 +57,11 @@ spec:
     securityContext:
       privileged: true
     tunnel: disabled
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bgp-config
+  namespace: kube-system
+data:
+  config.yaml:
