@@ -10,10 +10,7 @@ data:
     bpf:
       masquerade: true
     bgp:
-      enabled: true
-      announce:
-        loadBalancerIP: true
-        podCIDR: true
+      enabled: false
     bgpControlPlane:
       enabled: true
     cluster:

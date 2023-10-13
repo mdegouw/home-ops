@@ -17,12 +17,9 @@ spec:
     bpf:
       masquerade: true
     bgp:
-      enabled: true
-      announce:
-        loadBalancerIP: true
-        podCIDR: true
+      enabled: false
     bgpControlPlane:
-      enabled: true
+      enabled: false
     cluster:
       name: home-cluster
       id: 1
@@ -57,20 +54,3 @@ spec:
     securityContext:
       privileged: true
     tunnel: disabled
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: bgp-config
-  namespace: kube-system
-data:
-  config.yaml: |
-    peers:
-    - peer-address: 10.0.20.254
-      peer-asn: 64512
-      my-asn: 64513
-    address-pools:
-    - name: default
-      protocol: bgp
-      addresses:
-      - 10.69.22.0/24
