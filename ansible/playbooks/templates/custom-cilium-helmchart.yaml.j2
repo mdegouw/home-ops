@@ -17,7 +17,12 @@ spec:
     bpf:
       masquerade: true
     bgp:
-      enabled: false
+      enabled: true
+      announce:
+        loadBalancerIP: true
+        podCIDR: true
+    bgpControlPlane:
+      enabled: true
     cluster:
       name: home-cluster
       id: 1
