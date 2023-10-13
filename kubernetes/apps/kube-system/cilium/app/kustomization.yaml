@@ -6,5 +6,5 @@ resources:
   - ./cilium-l2.yaml
   - ./helmvalues.yaml
   - ./helmrelease.yaml
-  - ./BGPPeeringPolicy.yaml
-  - ./ippool.yaml
+  # - ./BGPPeeringPolicy.yaml
+  # - ./ippool.yaml
