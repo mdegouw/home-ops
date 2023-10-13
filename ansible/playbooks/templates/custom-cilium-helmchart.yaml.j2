@@ -64,4 +64,13 @@ metadata:
   name: bgp-config
   namespace: kube-system
 data:
-  config.yaml:
+  config.yaml: |
+    peers:
+    - peer-address: 10.0.20.254
+      peer-asn: 64512
+      my-asn: 64513
+    address-pools:
+    - name: default
+      protocol: bgp
+      addresses:
+      - 10.69.22.0/24
