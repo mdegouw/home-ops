@@ -18,7 +18,7 @@ spec: # CiliumBGPPeeringPolicySpec
       holdTimeSeconds: 90
       keepAliveTimeSeconds: 30
       gracefulRestart:
-        enabled: true
+        enabled: false
         restartTimeSeconds: 120
 ---
 apiVersion: "cilium.io/v2alpha1"
