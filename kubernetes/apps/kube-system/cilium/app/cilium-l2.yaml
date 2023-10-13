@@ -18,5 +18,6 @@ kind: CiliumLoadBalancerIPPool
 metadata:
   name: pool
 spec:
+  disabled: true
   cidrs:
     - cidr: "${NODE_CIDR}"
