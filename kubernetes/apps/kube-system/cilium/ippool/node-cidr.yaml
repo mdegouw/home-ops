@@ -1,0 +1,9 @@
+---
+apiVersion: cilium.io/v2alpha1
+kind: CiliumLoadBalancerIPPool
+metadata:
+  name: node-pool
+spec:
+  disabled: true
+  cidrs:
+    - cidr: "${NODE_CIDR}"
