@@ -10,7 +10,7 @@ data:
     bpf:
       masquerade: true
     bgp:
-      enabled: false
+      enabled: true
     cluster:
       name: home-cluster
       id: 1
