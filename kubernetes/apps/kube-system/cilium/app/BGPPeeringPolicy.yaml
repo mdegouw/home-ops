@@ -7,6 +7,9 @@ spec: # CiliumBGPPeeringPolicySpec
  virtualRouters: # []CiliumBGPVirtualRouter
  - localASN: 64513
    exportPodCIDR: true
+   serviceSelector:
+      matchExpressions:
+         - {key: somekey, operator: NotIn, values: ['never-used-value']}
    neighbors: # []CiliumBGPNeighbor
     - peerAddress: '10.0.20.254/24'
       peerASN: 64512
