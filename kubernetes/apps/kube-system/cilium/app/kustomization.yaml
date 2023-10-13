@@ -4,6 +4,6 @@ kind: Kustomization
 namespace: kube-system
 resources:
   - ./cilium-l2.yaml
-  # - ./cilium-l3.yaml
+  - ./cilium-l3.yaml
   - ./helmvalues.yaml
   - ./helmrelease.yaml
