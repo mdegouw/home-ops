@@ -55,9 +55,9 @@ spec:
         driver: freenas-api-iscsi
         instance_id:
         httpConnection:
-          protocol: http
+          protocol: https
           host: ${TRUENAS_STORAGE_IP}
-          port: 80
+          port: 443
           allowInsecure: true
           apiVersion: 2
         zfs:
