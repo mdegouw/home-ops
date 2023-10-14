@@ -54,7 +54,7 @@ spec:
 
     driver:
       config:
-        driver: truenas-api-nfs
+        driver: freenas-api-nfs
         instance_id:
         httpConnection:
           protocol: http
