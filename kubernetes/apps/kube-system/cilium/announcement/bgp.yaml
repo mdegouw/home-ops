@@ -6,7 +6,7 @@ metadata:
 spec: # CiliumBGPPeeringPolicySpec
  virtualRouters: # []CiliumBGPVirtualRouter
  - localASN: 64513
-   exportPodCIDR: true
+   exportPodCIDR: false
    serviceSelector:
       matchExpressions:
          - {key: somekey, operator: NotIn, values: ['never-used-value']}
