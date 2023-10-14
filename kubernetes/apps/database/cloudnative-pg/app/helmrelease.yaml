@@ -33,5 +33,3 @@ spec:
     config:
       data:
         INHERITED_ANNOTATIONS: kyverno.io/ignore
-    # image:
-    #   tag: 1.21.0
