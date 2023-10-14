@@ -21,3 +21,8 @@ resources:
   - ./piraeus.yaml
   - ./external-secrets.yaml
   - ./democratic-csi.yaml
+  - ./intel.yaml
+  - ./node-feature-discovery.yaml
+  - ./descheduler.yaml
+  - ./kyverno.yaml
+  - ./backube.yaml
