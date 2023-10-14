@@ -106,6 +106,8 @@ spec:
         hostPath: /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_4817705dbc19ec11b05777e5f01c6278-if00-port0
     nodeSelector:
       sonoff.feature.node.kubernetes.io/zigbee: "true"
+    securityContext:
+      privileged: true
     resources:
       requests:
         cpu: 10m
