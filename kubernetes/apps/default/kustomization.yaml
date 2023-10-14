@@ -6,4 +6,4 @@ resources:
   - ./hajimari/ks.yaml
   - ./discord-template-notifier/ks.yaml
   - ./mosquitto/ks.yaml
-  # - ./zigbee2mqtt/ks.yaml
+  - ./zigbee2mqtt/ks.yaml
