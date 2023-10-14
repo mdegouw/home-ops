@@ -38,6 +38,7 @@ spec:
     pruneIntervalDays: 10
     repository: node-red-restic-secret
     cacheCapacity: 5Gi
+    cacheStorageClassName: local-path
     volumeSnapshotClassName: truenas-iscsi
     storageClassName: truenas-iscsi
     retain:
