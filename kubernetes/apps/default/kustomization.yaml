@@ -5,5 +5,5 @@ resources:
   - ./namespace.yaml
   - ./hajimari/ks.yaml
   - ./discord-template-notifier/ks.yaml
-  # - ./mosquitto/ks.yaml
-  # - ./zigbee2mqtt/ks.yaml
+  - ./mosquitto/ks.yaml
+  - ./zigbee2mqtt/ks.yaml
