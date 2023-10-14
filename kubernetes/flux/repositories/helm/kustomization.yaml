@@ -26,3 +26,5 @@ resources:
   - ./descheduler.yaml
   - ./kyverno.yaml
   - ./backube.yaml
+  - ./redis-operator.yaml
+  - ./cloudnative-pg.yaml
