@@ -1,0 +1,91 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: truenas-nfs
+  namespace: kube-system
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: democratic-csi
+      version: 0.14.1
+      sourceRef:
+        kind: HelmRepository
+        name: democratic-csi
+        namespace: flux-system
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    csiDriver:
+      name: "org.democratic-csi.nfs"
+
+    storageClasses:
+      - name: truenas-nfs-csi
+        defaultClass: false
+        reclaimPolicy: Delete
+        volumeBindingMode: Immediate
+        allowVolumeExpansion: true
+        parameters:
+          fsType: nfs
+
+        mountOptions:
+          - noatime
+          - nfsvers=4
+        secrets:
+          provisioner-secret:
+          controller-publish-secret:
+          node-stage-secret:
+          node-publish-secret:
+          controller-expand-secret:
+
+    volumeSnapshotClasses:
+      - name: truenas-nfs-csi
+        parameters:
+      # if true, snapshots will be created with zfs send/receive
+        detachedSnapshots: "true"
+        secrets:
+          snapshotter-secret:
+
+    driver:
+      config:
+        driver: truenas-api-nfs
+        instance_id:
+        httpConnection:
+          protocol: http
+          host: ${TRUENAS_STORAGE_IP}
+          port: 80
+          allowInsecure: true
+          apiVersion: 2
+        zfs:
+          # Make sure to use the storage pool that was created previously
+          datasetParentName: s/k3s/nfs/vol
+          detachedSnapshotsDatasetParentName: s/k3s/nfs/snap
+          datasetEnableQuotas: true
+          datasetEnableReservation: false
+          datasetPermissionsMode: "0777"
+          datasetPermissionsUser: 0
+          datasetPermissionsGroup: 0
+        nfs:
+          shareHost: ${TRUENAS_STORAGE_IP}
+          shareAlldirs: false
+          shareAllowedHosts: []
+          shareAllowedNetworks: []
+          shareMaprootUser: root
+          shareMaprootGroup: wheel
+          shareMapallUser: ""
+          shareMapallGroup: ""
+  valuesFrom:
+    - targetPath: driver.config.httpConnection.apiKey
+      kind: Secret
+      name: democratic-csi-truenas-nfs-secret
+      valuesKey: api_key
+    - targetPath: driver.config.httpConnection.username
+      kind: Secret
+      name: democratic-csi-truenas-nfs-secret
+      valuesKey: api_user
