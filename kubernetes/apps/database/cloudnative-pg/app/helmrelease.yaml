@@ -25,7 +25,7 @@ spec:
   uninstall:
     keepHistory: false
   dependsOn:
-    - name: local-path-provisioner
+    - name: truenas-iscsi
       namespace: kube-system
   values:
     crds:
@@ -33,3 +33,5 @@ spec:
     config:
       data:
         INHERITED_ANNOTATIONS: kyverno.io/ignore
+    image:
+      tag: 1.21.0
