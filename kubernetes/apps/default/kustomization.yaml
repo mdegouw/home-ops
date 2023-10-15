@@ -9,3 +9,5 @@ resources:
   - ./zigbee2mqtt/ks.yaml
   - ./home-assistant/ks.yaml
   - ./node-red/ks.yaml
+  - ./shlink/ks.yaml
+  - ./kubernetes-schemas/ks.yaml
