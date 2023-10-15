@@ -24,9 +24,6 @@ spec:
       retries: 3
   uninstall:
     keepHistory: false
-  dependsOn:
-    - name: truenas-iscsi
-      namespace: kube-system
   values:
     crds:
       create: true

@@ -10,7 +10,7 @@ resources:
   - ./reloader/ks.yaml
   - ./external-secrets/ks.yaml
   - ./snapshot-controller/ks.yaml
-  # - ./democratic-csi/ks.yaml
+  - ./democratic-csi/ks.yaml
   - ./node-feature-discovery/ks.yaml
   - ./intel-device-plugin/ks.yaml
   - ./descheduler/ks.yaml
