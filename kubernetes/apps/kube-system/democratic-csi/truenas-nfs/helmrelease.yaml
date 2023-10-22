@@ -34,7 +34,7 @@ spec:
         parameters:
           # for block-based storage can be ext3, ext4, xfs
           # for nfs should be nfs
-          fsType: nfs
+          "csi.storage.k8s.io/fstype": nfs
 
         mountOptions:
           - noatime
