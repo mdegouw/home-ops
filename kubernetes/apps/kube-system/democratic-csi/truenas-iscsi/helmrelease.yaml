@@ -74,6 +74,10 @@ spec:
           # datasetParentName should therefore be 17 chars or less
           datasetParentName: s/k3s/iscsi/vol
           detachedSnapshotsDatasetParentName: s/k3s/iscsi/snap
+
+          datasetProperties:
+            "org.freenas:description": "{{ parameters.[csi.storage.k8s.io/pvc/namespace] }}/{{ parameters.[csi.storage.k8s.io/pvc/name] }}"
+
           # "" (inherit), lz4, gzip-9, etc
           zvolCompression:
           # "" (inherit), on, off, verify
