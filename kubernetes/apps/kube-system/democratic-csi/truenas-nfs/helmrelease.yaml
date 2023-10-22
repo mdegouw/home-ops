@@ -77,7 +77,7 @@ spec:
           datasetEnableReservation: false
           datasetPermissionsMode: "0777"
           datasetPermissionsUser: 568
-          datasetPermissionsGroup: 568
+          datasetPermissionsGroup: 0
 
           datasetProperties:
             "org.freenas:description": "{{ parameters.[csi.storage.k8s.io/pvc/namespace] }}/{{ parameters.[csi.storage.k8s.io/pvc/name] }}"
