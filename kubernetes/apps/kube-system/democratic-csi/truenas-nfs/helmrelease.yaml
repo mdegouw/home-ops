@@ -64,53 +64,33 @@ spec:
           port: 443
           allowInsecure: true
           apiVersion: 2
+
         zfs:
-          # the example below is useful for TrueNAS 12
-          cli:
-            sudoEnabled: true
-            # paths:
-            #   zfs: /usr/local/sbin/zfs
-            #   zpool: /usr/local/sbin/zpool
-            #   sudo: /usr/local/bin/sudo
-            #   chroot: /usr/sbin/chroot
-          # total volume name (zvol/<datasetParentName>/<pvc name>) length cannot exceed 63 chars
-          # https://www.ixsystems.com/documentation/freenas/11.2-U5/storage.html#zfs-zvol-config-opts-tab
-          # standard volume naming overhead is 46 chars
-          # datasetParentName should therefore be 17 chars or less
+          #datasetProperties:
+          #  "org.freenas:description": "{{ parameters.[csi.storage.k8s.io/pvc/namespace] }}/{{ parameters.[csi.storage.k8s.io/pvc/name] }}"
+          #  "org.freenas:test": "{{ parameters.foo }}"
+          #  "org.freenas:test2": "some value"
+
           datasetParentName: s/k3s/nfs/vol
           detachedSnapshotsDatasetParentName: s/k3s/nfs/snap
           datasetEnableQuotas: true
           datasetEnableReservation: false
           datasetPermissionsMode: "0777"
           datasetPermissionsUser: 568
-          datasetPermissionsGroup: 0
+          datasetPermissionsGroup: 568
 
-          datasetProperties:
-            "org.freenas:description": "{{ parameters.[csi.storage.k8s.io/pvc/namespace] }}/{{ parameters.[csi.storage.k8s.io/pvc/name] }}"
-
-          # "" (inherit), lz4, gzip-9, etc
-          zvolCompression:
-          # "" (inherit), on, off, verify
-          zvolDedup:
-          zvolEnableReservation: false
-          # 512, 1K, 2K, 4K, 8K, 16K, 64K, 128K default is 16K
-          zvolBlocksize:
-          nfs:
-            shareCommentTemplate: "{{ parameters.[csi.storage.k8s.io/pvc/namespace] }}-{{ parameters.[csi.storage.k8s.io/pvc/name] }}"
-            shareHost: ${TRUENAS_STORAGE_IP}
-            shareAlldirs: false
-            shareAllowedHosts: []
-            shareAllowedNetworks: []
-            shareMaprootUser: apps
-            shareMaprootGroup: apps
-            shareMapallUser: ""
-            shareMapallGroup: ""
+        nfs:
+          #shareCommentTemplate: "{{ parameters.[csi.storage.k8s.io/pvc/namespace] }}-{{ parameters.[csi.storage.k8s.io/pvc/name] }}"
+          shareHost: ${TRUENAS_STORAGE_IP}
+          shareAlldirs: false
+          shareAllowedHosts: []
+          shareAllowedNetworks: []
+          shareMaprootUser: apps
+          shareMaprootGroup: apps
+          shareMapallUser: ""
+          shareMapallGroup: ""
   valuesFrom:
     - targetPath: driver.config.httpConnection.apiKey
       kind: Secret
       name: democratic-csi-truenas-nfs-secret
       valuesKey: api_key
-    - targetPath: driver.config.httpConnection.username
-      kind: Secret
-      name: democratic-csi-truenas-nfs-secret
-      valuesKey: api_user
