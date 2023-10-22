@@ -40,6 +40,10 @@ spec:
       TZ: ${TIMEZONE}
     service:
       main:
+        type: LoadBalancer
+        annotations:
+          io.cilium/lb-ipam-ips: 10.0.240.66
+        externalTrafficPolicy: Cluster
         ports:
           http:
             port: 32400
