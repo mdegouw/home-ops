@@ -56,7 +56,7 @@ spec:
 
     driver:
       config:
-        driver: freenas-api-nfs
+        driver: freenas-nfs
         instance_id:
         httpConnection:
           protocol: http
@@ -64,6 +64,9 @@ spec:
           port: 80
           # allowInsecure: true
           apiVersion: 2
+        sshConnection:
+          host: ${TRUENAS_STORAGE_IP}
+          port: 22
 
         zfs:
           cli:
@@ -95,7 +98,11 @@ spec:
       kind: Secret
       name: democratic-csi-truenas-nfs-secret
       valuesKey: api_key
-    - targetPath: driver.config.httpConnection.username
+    - targetPath: driver.config.sshConnection.username
       kind: Secret
       name: democratic-csi-truenas-nfs-secret
-      valuesKey: api_user
+      valuesKey: ssh_user
+    - targetPath: driver.config.sshConnection.privateKey
+      kind: Secret
+      name: democratic-csi-truenas-nfs-secret
+      valuesKey: ssh_key
