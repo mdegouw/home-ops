@@ -11,4 +11,4 @@ resources:
   - ./node-red/ks.yaml
   - ./shlink/ks.yaml
   - ./kubernetes-schemas/ks.yaml
-  - ./lldap/ks.yaml
+  # - ./lldap/ks.yaml
