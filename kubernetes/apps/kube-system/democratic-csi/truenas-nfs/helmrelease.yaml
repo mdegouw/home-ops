@@ -98,6 +98,10 @@ spec:
       kind: Secret
       name: democratic-csi-truenas-nfs-secret
       valuesKey: api_key
+    - targetPath: driver.config.httpConnection.username
+      kind: Secret
+      name: democratic-csi-truenas-nfs-secret
+      valuesKey: api_user
     - targetPath: driver.config.sshConnection.username
       kind: Secret
       name: democratic-csi-truenas-nfs-secret
