@@ -59,10 +59,10 @@ spec:
         driver: freenas-api-nfs
         instance_id:
         httpConnection:
-          protocol: https
+          protocol: http
           host: ${TRUENAS_STORAGE_IP}
-          port: 443
-          allowInsecure: true
+          port: 80
+          # allowInsecure: true
           apiVersion: 2
 
         zfs:
