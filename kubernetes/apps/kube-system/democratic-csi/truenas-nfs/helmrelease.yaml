@@ -31,8 +31,6 @@ spec:
         reclaimPolicy: Delete
         volumeBindingMode: Immediate
         allowVolumeExpansion: true
-        parameters:
-          fsType: xfs
 
         mountOptions: []
         secrets:
@@ -74,6 +72,15 @@ spec:
           # datasetParentName should therefore be 17 chars or less
           datasetParentName: s/k3s/nfs/vol
           detachedSnapshotsDatasetParentName: s/k3s/nfs/snap
+          datasetEnableQuotas: true
+          datasetEnableReservation: false
+          datasetPermissionsMode: "0777"
+          datasetPermissionsUser: 568
+          datasetPermissionsGroup: 568
+
+          datasetProperties:
+            "org.freenas:description": "{{ parameters.[csi.storage.k8s.io/pvc/namespace] }}/{{ parameters.[csi.storage.k8s.io/pvc/name] }}"
+
           # "" (inherit), lz4, gzip-9, etc
           zvolCompression:
           # "" (inherit), on, off, verify
