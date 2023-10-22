@@ -18,6 +18,6 @@ resources:
   - ./authelia/ks.yaml
   - ./jellyfin/ks.yaml
   - ./plex/ks.yaml
-  - ./qbittorent/ks.yaml
+  - ./qbittorrent/ks.yaml
   - ./cross-seed/ks.yaml
   - ./prowlarr/ks.yaml
