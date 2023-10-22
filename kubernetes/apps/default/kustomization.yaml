@@ -12,3 +12,4 @@ resources:
   - ./shlink/ks.yaml
   - ./kubernetes-schemas/ks.yaml
   - ./lldap/ks.yaml
+  - ./authelia/ks.yaml
