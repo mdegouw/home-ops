@@ -36,7 +36,7 @@ spec:
       repository: ghcr.io/cross-seed/cross-seed
       tag: 5.5.4
     env:
-      TZ: America/New_York
+      TZ: ${SECRET_DOMAIN}
     args: ["daemon"]
     service:
       main:

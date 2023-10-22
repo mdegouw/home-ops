@@ -36,7 +36,7 @@ spec:
       repository: ghcr.io/onedr0p/qbittorrent
       tag: 4.5.5@sha256:f4a1a5eece13beed61e579172d2a54b1fc2e7ff2bbdbd7ef22a4d9f6fc36e198
     env:
-      TZ: America/New_York
+      TZ: ${TIMEZONE}
       QBITTORRENT__PORT: &port 80
       QBITTORRENT__BT_PORT: &bittorrentPort 50413
       QBT_Preferences__WebUI__AlternativeUIEnabled: false
@@ -58,7 +58,7 @@ spec:
         enabled: true
         type: LoadBalancer
         annotations:
-          io.cilium/lb-ipam-ips: ${IP_QBITTORENT}
+          io.cilium/lb-ipam-ips: ${IP_QBITTORRENT}
         ports:
           bittorrent:
             enabled: true
@@ -84,13 +84,10 @@ spec:
       fsGroup: 568
       fsGroupChangePolicy: OnRootMismatch
       supplementalGroups: [10000]
-    volumeClaimTemplates:
-      - name: config
-        mountPath: /config
-        accessMode: ReadWriteOnce
-        size: 2Gi
-        storageClass: truenas-iscsi
     persistence:
+      config:
+        enabled: true
+        existingClaim: qbittorrent-config
       completed-script:
         enabled: true
         type: configMap
