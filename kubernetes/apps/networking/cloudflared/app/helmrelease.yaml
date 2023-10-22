@@ -48,6 +48,8 @@ spec:
       - tunnel
       - --config
       - /etc/cloudflared/config/config.yaml
+      - --edge-ip-version
+      - 4
       - run
       - "$(TUNNEL_ID)"
     service:
