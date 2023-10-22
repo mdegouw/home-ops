@@ -18,3 +18,5 @@ resources:
   - ./authelia/ks.yaml
   - ./jellyfin/ks.yaml
   - ./plex/ks.yaml
+  # - ./qbittorent/ks.yaml #TODO: Configure files
+  # - ./cross-seed/ks.yaml #TODO: Configure files

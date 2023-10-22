@@ -1,0 +1,102 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: truenas-iscsi
+  namespace: kube-system
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: democratic-csi
+      version: 0.14.1
+      sourceRef:
+        kind: HelmRepository
+        name: democratic-csi
+        namespace: flux-system
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    csiDriver:
+      name: "org.democratic-csi.nfs"
+
+    storageClasses:
+      - name: truenas-nfs
+        defaultClass: true
+        reclaimPolicy: Delete
+        volumeBindingMode: Immediate
+        allowVolumeExpansion: true
+        parameters:
+          fsType: xfs
+
+        mountOptions: []
+        secrets:
+          provisioner-secret:
+          controller-publish-secret:
+          node-stage-secret:
+          node-publish-secret:
+          controller-expand-secret:
+
+    volumeSnapshotClasses:
+      - name: truenas-nfs
+        parameters:
+      # if true, snapshots will be created with zfs send/receive
+        detachedSnapshots: "true"
+        secrets:
+          snapshotter-secret:
+
+    driver:
+      config:
+        driver: freenas-api-nfs
+        instance_id:
+        httpConnection:
+          protocol: https
+          host: ${TRUENAS_STORAGE_IP}
+          port: 443
+          allowInsecure: true
+          apiVersion: 2
+        zfs:
+          # the example below is useful for TrueNAS 12
+          cli:
+            paths:
+              zfs: /usr/local/sbin/zfs
+              zpool: /usr/local/sbin/zpool
+              sudo: /usr/local/bin/sudo
+              chroot: /usr/sbin/chroot
+          # total volume name (zvol/<datasetParentName>/<pvc name>) length cannot exceed 63 chars
+          # https://www.ixsystems.com/documentation/freenas/11.2-U5/storage.html#zfs-zvol-config-opts-tab
+          # standard volume naming overhead is 46 chars
+          # datasetParentName should therefore be 17 chars or less
+          datasetParentName: s/k3s/nfs/vol
+          detachedSnapshotsDatasetParentName: s/k3s/nfs/snap
+          # "" (inherit), lz4, gzip-9, etc
+          zvolCompression:
+          # "" (inherit), on, off, verify
+          zvolDedup:
+          zvolEnableReservation: false
+          # 512, 1K, 2K, 4K, 8K, 16K, 64K, 128K default is 16K
+          zvolBlocksize:
+          nfs:
+            #shareCommentTemplate: "{{ parameters.[csi.storage.k8s.io/pvc/namespace] }}-{{ parameters.[csi.storage.k8s.io/pvc/name] }}"
+            shareHost: ${TRUENAS_STORAGE_IP}
+            shareAlldirs: false
+            shareAllowedHosts: []
+            shareAllowedNetworks: []
+            shareMaprootUser: apps
+            shareMaprootGroup: apps
+            shareMapallUser: ""
+            shareMapallGroup: ""
+  valuesFrom:
+    - targetPath: driver.config.httpConnection.apiKey
+      kind: Secret
+      name: democratic-csi-truenas-nfs-secret
+      valuesKey: api_key
+    - targetPath: driver.config.httpConnection.username
+      kind: Secret
+      name: democratic-csi-truenas-nfs-secret
+      valuesKey: api_user
