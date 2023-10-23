@@ -19,11 +19,11 @@ resources:
   - ./jellyfin/ks.yaml
   - ./plex/ks.yaml
   - ./qbittorrent/ks.yaml
-  # - ./cross-seed/ks.yaml
-  # - ./prowlarr/ks.yaml
-  # - ./sonarr/ks.yaml
-  # - ./recyclarr/ks.yaml
-  # - ./radarr/ks.yaml
-  # - ./overseerr/ks.yaml
-  # - ./autobrr/ks.yaml
-  # - ./media-browser/ks.yaml
+  - ./cross-seed/ks.yaml
+  - ./prowlarr/ks.yaml
+  - ./sonarr/ks.yaml
+  - ./recyclarr/ks.yaml
+  - ./radarr/ks.yaml
+  - ./overseerr/ks.yaml
+  - ./autobrr/ks.yaml
+  - ./media-browser/ks.yaml
