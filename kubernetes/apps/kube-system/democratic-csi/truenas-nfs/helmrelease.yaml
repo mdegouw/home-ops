@@ -56,24 +56,19 @@ spec:
 
     driver:
       config:
-        driver: freenas-nfs
+        driver: freenas-api-nfs
         instance_id:
         httpConnection:
-          protocol: http
+          protocol: https
           host: ${TRUENAS_STORAGE_IP}
-          port: 80
-          # allowInsecure: true
+          port: 443
+          allowInsecure: true
           apiVersion: 2
-        sshConnection:
-          host: ${TRUENAS_STORAGE_IP}
-          port: 22
 
         zfs:
-          cli:
-            sudoEnabled: true
-
           datasetProperties:
             "org.freenas:description": "{{ parameters.[csi.storage.k8s.io/pvc/namespace] }}/{{ parameters.[csi.storage.k8s.io/pvc/name] }}"
+
 
           datasetParentName: s/k3s/nfs/vol
           detachedSnapshotsDatasetParentName: s/k3s/nfs/snap
@@ -98,15 +93,3 @@ spec:
       kind: Secret
       name: democratic-csi-truenas-nfs-secret
       valuesKey: api_key
-    - targetPath: driver.config.httpConnection.username
-      kind: Secret
-      name: democratic-csi-truenas-nfs-secret
-      valuesKey: api_user
-    - targetPath: driver.config.sshConnection.username
-      kind: Secret
-      name: democratic-csi-truenas-nfs-secret
-      valuesKey: ssh_user
-    - targetPath: driver.config.sshConnection.privateKey
-      kind: Secret
-      name: democratic-csi-truenas-nfs-secret
-      valuesKey: ssh_key
