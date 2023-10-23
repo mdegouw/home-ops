@@ -10,7 +10,7 @@ parameters:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: media
+  name: qbittorrent-config
 spec:
   storageClassName: qbittorrent-config
   capacity:
