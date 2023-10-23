@@ -3,7 +3,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: radarr
+  name: whisparr
   namespace: default
 spec:
   interval: 30m
@@ -32,22 +32,22 @@ spec:
         imagePullPolicy: IfNotPresent
         envFrom: &envFrom
           - secretRef:
-              name: radarr-secret
+              name: whisparr-secret
     controller:
       annotations:
         reloader.stakater.com/auto: "true"
     image:
-      repository: ghcr.io/onedr0p/radarr-develop
-      tag: 5.1.1.8195@sha256:9579f7c96c5db2f1f98219e83a296b27c696d1f7e18ab4cf2deb90e9e9b3ef37
+      repository: ghcr.io/hotio/whisparr
+      tag: nightly-1976522@sha256:fb51ba7dba17f1a0fa968951635b1659406c9ff03909386793a124831913cf82
     env:
       TZ: ${TIMEZONE}
       PUSHOVER_DEBUG: "false"
-      RADARR__AUTHENTICATION_METHOD: External
-      RADARR__AUTHENTICATION_REQUIRED: DisabledForLocalAddresses
-      RADARR__INSTANCE_NAME: Radarr
-      RADARR__PORT: &port 80
-      RADARR__LOG_LEVEL: info
-      RADARR__THEME: dark
+      WHISPARR__AUTHENTICATION_METHOD: External
+      WHISPARR__AUTHENTICATION_REQUIRED: DisabledForLocalAddresses
+      WHISPARR__INSTANCE_NAME: Whisparr
+      WHISPARR__PORT: &port 80
+      WHISPARR__LOG_LEVEL: info
+      WHISPARR__THEME: dark
     envFrom: *envFrom
     service:
       main:
@@ -90,15 +90,7 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: radarr-config
-      scripts:
-        enabled: true
-        type: configMap
-        name: radarr-configmap
-        subPath: pushover-notify.sh
-        mountPath: /scripts/pushover-notify.sh
-        defaultMode: 0775
-        readOnly: true
+        existingClaim: whisparr-config
       media:
         enabled: true
         existingClaim: media
