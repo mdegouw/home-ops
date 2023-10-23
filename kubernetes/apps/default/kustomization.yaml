@@ -32,4 +32,3 @@ resources:
   - ./sabnzbd/ks.yaml
   - ./slskd/ks.yaml
   - ./unpackerr/ks.yaml
-  # - ./whisparr/ks.yaml
