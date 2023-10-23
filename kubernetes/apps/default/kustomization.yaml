@@ -20,10 +20,10 @@ resources:
   - ./plex/ks.yaml
   - ./qbittorrent/ks.yaml
   - ./prowlarr/ks.yaml
-  # - ./cross-seed/ks.yaml
-  # - ./sonarr/ks.yaml
-  # - ./recyclarr/ks.yaml
-  # - ./radarr/ks.yaml
-  # - ./overseerr/ks.yaml
-  # - ./autobrr/ks.yaml
-  # - ./media-browser/ks.yaml
+  - ./cross-seed/ks.yaml
+  - ./sonarr/ks.yaml
+  - ./recyclarr/ks.yaml
+  - ./radarr/ks.yaml
+  - ./overseerr/ks.yaml
+  - ./autobrr/ks.yaml
+  - ./media-browser/ks.yaml
