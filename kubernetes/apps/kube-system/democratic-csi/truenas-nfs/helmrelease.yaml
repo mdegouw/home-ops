@@ -88,6 +88,14 @@ spec:
           shareMaprootGroup: apps
           shareMapallUser: ""
           shareMapallGroup: ""
+
+    controller:
+      driver:
+        image: docker.io/democraticcsi/democratic-csi:next
+    node:
+      driver:
+        image: docker.io/democraticcsi/democratic-csi:next
+
   valuesFrom:
     - targetPath: driver.config.httpConnection.apiKey
       kind: Secret
