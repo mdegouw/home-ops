@@ -25,7 +25,7 @@ spec:
   uninstall:
     keepHistory: false
   dependsOn:
-    - name: truenas-iscsi
+    - name: truenas-nfs
       namespace: kube-system
     - name: volsync
       namespace: volsync
@@ -85,7 +85,7 @@ spec:
         mountPath: /config
         accessMode: ReadWriteOnce
         size: 5Gi
-        storageClass: truenas-iscsi
+        storageClass: truenas-nfs
     resources:
       requests:
         cpu: 10m

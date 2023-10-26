@@ -89,6 +89,7 @@ spec:
           shareMapallUser: ""
           shareMapallGroup: ""
 
+    # TODO: remove these overrides when this issues gets resolved in main (https://github.com/democratic-csi/democratic-csi/issues/333)
     controller:
       driver:
         image: docker.io/democraticcsi/democratic-csi:next

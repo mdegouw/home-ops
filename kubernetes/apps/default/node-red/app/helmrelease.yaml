@@ -52,7 +52,7 @@ spec:
     persistence:
       config:
         enabled: true
-        storageClass: truenas-iscsi
+        storageClass: truenas-nfs
         type: pvc
         accessMode: ReadWriteOnce
         size: 1Gi

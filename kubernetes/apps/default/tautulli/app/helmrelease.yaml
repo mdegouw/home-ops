@@ -67,7 +67,7 @@ spec:
         mountPath: /config
         accessMode: ReadWriteOnce
         size: 5Gi
-        storageClass: truenas-iscsi
+        storageClass: truenas-nfs
     resources:
       requests:
         cpu: 10m

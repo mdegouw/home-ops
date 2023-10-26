@@ -5,8 +5,8 @@ metadata:
   name: sonarr-config
   namespace: default
 spec:
-  accessModes: ["ReadWriteOnce"]
+  accessModes: ["ReadWriteMany"]
   resources:
     requests:
       storage: 15Gi
-  storageClassName: truenas-iscsi
+  storageClassName: truenas-nfs

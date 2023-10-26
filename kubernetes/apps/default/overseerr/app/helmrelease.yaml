@@ -67,7 +67,7 @@ spec:
         mountPath: /app/config
         accessMode: ReadWriteOnce
         size: 1Gi
-        storageClass: truenas-iscsi
+        storageClass: truenas-nfs
     resources:
       requests:
         cpu: 10m
