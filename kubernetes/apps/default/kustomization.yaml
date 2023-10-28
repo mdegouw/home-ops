@@ -6,29 +6,29 @@ resources:
   - ./namespace.yaml
   - ./media-pvc.yaml
   # Flux-Kustomizations
-  - ./hajimari/ks.yaml
-  - ./discord-template-notifier/ks.yaml
-  - ./mosquitto/ks.yaml
-  - ./zigbee2mqtt/ks.yaml
-  - ./home-assistant/ks.yaml
-  - ./node-red/ks.yaml
-  - ./shlink/ks.yaml
-  - ./kubernetes-schemas/ks.yaml
-  - ./lldap/ks.yaml
-  - ./authelia/ks.yaml
-  - ./jellyfin/ks.yaml
-  - ./plex/ks.yaml
-  - ./qbittorrent/ks.yaml
-  - ./prowlarr/ks.yaml
-  - ./cross-seed/ks.yaml
-  - ./sonarr/ks.yaml
-  - ./recyclarr/ks.yaml
-  - ./radarr/ks.yaml
-  - ./overseerr/ks.yaml
-  - ./autobrr/ks.yaml
-  - ./media-browser/ks.yaml
-  - ./tautulli/ks.yaml
-  - ./miniflux/ks.yaml
-  - ./sabnzbd/ks.yaml
-  - ./slskd/ks.yaml
-  - ./unpackerr/ks.yaml
+  # - ./hajimari/ks.yaml
+  # - ./discord-template-notifier/ks.yaml
+  # - ./mosquitto/ks.yaml
+  # - ./zigbee2mqtt/ks.yaml
+  # - ./home-assistant/ks.yaml
+  # - ./node-red/ks.yaml
+  # - ./shlink/ks.yaml
+  # - ./kubernetes-schemas/ks.yaml
+  # - ./lldap/ks.yaml
+  # - ./authelia/ks.yaml
+  # - ./jellyfin/ks.yaml
+  # - ./plex/ks.yaml
+  # - ./qbittorrent/ks.yaml
+  # - ./prowlarr/ks.yaml
+  # - ./cross-seed/ks.yaml
+  # - ./sonarr/ks.yaml
+  # - ./recyclarr/ks.yaml
+  # - ./radarr/ks.yaml
+  # - ./overseerr/ks.yaml
+  # - ./autobrr/ks.yaml
+  # - ./media-browser/ks.yaml
+  # - ./tautulli/ks.yaml
+  # - ./miniflux/ks.yaml
+  # - ./sabnzbd/ks.yaml
+  # - ./slskd/ks.yaml
+  # - ./unpackerr/ks.yaml
