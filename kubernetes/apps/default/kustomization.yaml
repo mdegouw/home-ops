@@ -17,7 +17,7 @@ resources:
   - ./lldap/ks.yaml
   - ./authelia/ks.yaml
 
-  # - ./jellyfin/ks.yaml
+  - ./jellyfin/ks.yaml
   - ./plex/ks.yaml
   - ./tautulli/ks.yaml
 
@@ -31,8 +31,8 @@ resources:
   - ./autobrr/ks.yaml
   - ./media-browser/ks.yaml
 
-  # - ./miniflux/ks.yaml
+  - ./miniflux/ks.yaml
 
-  # - ./cross-seed/ks.yaml
-  # - ./sabnzbd/ks.yaml
-  # - ./slskd/ks.yaml
+  - ./cross-seed/ks.yaml
+  - ./sabnzbd/ks.yaml
+  - ./slskd/ks.yaml

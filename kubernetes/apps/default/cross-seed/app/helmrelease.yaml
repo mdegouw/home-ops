@@ -36,7 +36,7 @@ spec:
       repository: ghcr.io/cross-seed/cross-seed
       tag: 5.5.4
     env:
-      TZ: ${SECRET_DOMAIN}
+      TZ: ${TIMEZONE}
     args: ["daemon"]
     service:
       main:
