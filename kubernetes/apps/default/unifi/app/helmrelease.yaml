@@ -60,7 +60,7 @@ spec:
           remotesyslog:
             port: 5514
     ingress:
-      main:
+      http:
         enabled: true
         ingressClassName: external
         annotations:
