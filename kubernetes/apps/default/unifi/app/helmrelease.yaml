@@ -45,12 +45,14 @@ spec:
             port: 8443
           stun:
             port: 3478
+            protocol: UDP
           discovery:
             port: 10001
           comm:
             port: 8080
           l2discover:
             port: 1900
+            protocol: UDP
           httpsptalredir:
             port: 8843
           httpptalredir:
@@ -59,6 +61,7 @@ spec:
             port: 6789
           remotesyslog:
             port: 5514
+            protocol: UDP
     ingress:
       http:
         enabled: true
