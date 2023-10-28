@@ -6,16 +6,22 @@ resources:
   - ./namespace.yaml
   - ./media-pvc.yaml
   # Flux-Kustomizations
-  # - ./hajimari/ks.yaml
-  # - ./discord-template-notifier/ks.yaml
-  # - ./mosquitto/ks.yaml
-  # - ./zigbee2mqtt/ks.yaml
-  # - ./home-assistant/ks.yaml
-  # - ./node-red/ks.yaml
-  # - ./shlink/ks.yaml
-  # - ./kubernetes-schemas/ks.yaml
-  # - ./lldap/ks.yaml
-  # - ./authelia/ks.yaml
+  - ./hajimari/ks.yaml
+  - ./discord-template-notifier/ks.yaml
+  - ./kubernetes-schemas/ks.yaml
+  - ./mosquitto/ks.yaml
+  - ./zigbee2mqtt/ks.yaml
+  - ./node-red/ks.yaml
+  - ./home-assistant/ks.yaml
+  - ./shlink/ks.yaml
+  - ./lldap/ks.yaml
+  - ./authelia/ks.yaml
+
+
+
+
+
+
   # - ./jellyfin/ks.yaml
   # - ./plex/ks.yaml
   # - ./qbittorrent/ks.yaml
