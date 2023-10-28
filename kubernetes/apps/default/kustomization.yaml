@@ -29,7 +29,7 @@ resources:
   # - ./recyclarr/ks.yaml
   # - ./overseerr/ks.yaml
   # - ./autobrr/ks.yaml
-  # - ./media-browser/ks.yaml
+  - ./media-browser/ks.yaml
 
   # - ./miniflux/ks.yaml
 
