@@ -48,7 +48,8 @@ data:
         enabled: true
         frontend:
           server:
-            enabled: false
+            ipv6:
+              enabled: false
         rollOutPods: true
         ingress:
           enabled: true
