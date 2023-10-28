@@ -1,0 +1,85 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: unifi
+  namespace: default
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: app-template
+      version: 1.5.0
+      sourceRef:
+        kind: HelmRepository
+        name: bjw-s
+        namespace: flux-system
+  maxHistory: 3
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 3
+  uninstall:
+    keepHistory: false
+  values:
+    controller:
+      type: statefulset
+      annotations:
+        reloader.stakater.com/auto: "true"
+    image:
+      repository: ghcr.io/linuxserver/unifi-controller
+      tag: 7.5.187@sha256:3e885f204382956eaba1a04551a0e6edce4e0e26486aef2d9d62dac78dd6b4dc
+
+
+    service:
+      main:
+        type: LoadBalancer
+        annotations:
+          io.cilium/lb-ipam-ips: ${IP_UNIFI}
+        ports:
+          http:
+            port: 8443
+          stun:
+            port: 3478
+          discovery:
+            port: 10001
+          comm:
+            port: 8080
+          l2discover:
+            port: 1900
+          httpsptalredir:
+            port: 8843
+          httpptalredir:
+            port: 8880
+          mobspeedtest:
+            port: 6789
+          remotesyslog:
+            port: 5514
+    ingress:
+      main:
+        enabled: true
+        ingressClassName: external
+        annotations:
+          external-dns.alpha.kubernetes.io/target: external.${SECRET_DOMAIN}
+        hosts:
+          - host: &host "{{ .Release.Name }}.${SECRET_DOMAIN}"
+            paths:
+              - path: /
+                pathType: Prefix
+        tls:
+          - hosts:
+              - *host
+
+    persistence:
+      config:
+        enabled: true
+        storageClass: truenas-nfs
+        type: pvc
+        accessMode: ReadWriteOnce
+        size: 5Gi
+        mountPath: /config
+        retain: true
