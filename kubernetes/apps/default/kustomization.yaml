@@ -17,7 +17,7 @@ resources:
   - ./lldap/ks.yaml
   - ./authelia/ks.yaml
 
-  - ./jellyfin/ks.yaml
+  # - ./jellyfin/ks.yaml
   - ./plex/ks.yaml
   - ./tautulli/ks.yaml
 

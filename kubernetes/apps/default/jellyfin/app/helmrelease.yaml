@@ -41,7 +41,7 @@ spec:
             - name: config
               accessMode: ReadWriteOnce
               size: 50Gi
-              storageClass: truenas-iscsi
+              storageClass: truenas-nfs
               globalMounts:
                 - path: /config
         pod:
