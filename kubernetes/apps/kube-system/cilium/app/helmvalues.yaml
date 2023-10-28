@@ -46,6 +46,9 @@ data:
             enabled: true
       ui:
         enabled: true
+        frontend:
+          server:
+            enabled: false
         rollOutPods: true
         ingress:
           enabled: true
