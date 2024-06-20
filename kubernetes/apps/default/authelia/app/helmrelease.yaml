@@ -45,7 +45,7 @@ spec:
         reloader.stakater.com/auto: "true"
     image:
       repository: ghcr.io/authelia/authelia
-      tag: master@sha256:d2df501129febb954c3048d2334be5eb31ffab880079623269e83e7e5972608b
+      tag: master@sha256:5cf167a0cd239739c5df68bde06260361a8a28f0fb906c85c113c01265e43f14
     args: ["--config", "/config/configuration.yaml", "--config.experimental.filters", "expand-env"]
     env:
       AUTHELIA_AUTHENTICATION_BACKEND_LDAP_ADDITIONAL_GROUPS_DN: ou=groups
