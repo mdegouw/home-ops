@@ -38,7 +38,7 @@ spec:
         reloader.stakater.com/auto: "true"
     image:
       repository: ghcr.io/onedr0p/radarr-develop
-      tag: 5.1.1.8195@sha256:9579f7c96c5db2f1f98219e83a296b27c696d1f7e18ab4cf2deb90e9e9b3ef37
+      tag: 5.8.0.8897@sha256:2c9c733b4c89280cfcc25ba727b08bac7fee272917dfa28de675d4e0c3309684
     env:
       TZ: ${TIMEZONE}
       PUSHOVER_DEBUG: "false"
