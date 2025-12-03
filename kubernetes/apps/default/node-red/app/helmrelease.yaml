@@ -28,7 +28,7 @@ spec:
   values:
     image:
       repository: nodered/node-red
-      tag: 3.1.0
+      tag: 4.1.2
     service:
       main:
         ports:
